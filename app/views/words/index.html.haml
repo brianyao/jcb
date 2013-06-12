@@ -1,0 +1,15 @@
+-#  This file is app/views/movies/index.html.haml
+%h2 The very first word list
+
+%table#words
+  %thead
+    %tr
+      %th Word
+      %th Translation
+      %th created at
+  %tbody
+    - @words.each do |word|
+      %tr
+        %td= word.title
+        %td= word.in_chinese
+        %td= word.add_date

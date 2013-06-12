@@ -1,0 +1,1360 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 19:49:06 +0200
+Served asset /rails.png - 200 OK (3ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2013-06-08 19:49:36 +0200
+  Processing by Rails::InfoController#properties as HTML
+Rendered inline template (0.4ms)
+Completed 200 OK in 63ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (18.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (12.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateWords (20130608175942)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateWords (20130608175942)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateWords (20130608175942)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "words" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar(255), "explanation" varchar(255), "attempt_count" integer, "failed_count" integer, "create_time" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130608175942')
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("words")[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateWords (20130608175942)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "words"
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130608175942'[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateWords (20130608175942)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "words" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "in_chinese" varchar(255), "attempt_count" integer, "failed_count" integer, "add_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130608175942')
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("words")[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+WARNING: Can't mass-assign protected attributes: word
+  [1m[35mSQL (12.6ms)[0m  INSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["add_date", Sat, 08 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", 0], ["created_at", Sat, 08 Jun 2013 18:54:22 UTC +00:00], ["failed_count", 0], ["in_chinese", "zuoye"], ["title", nil], ["updated_at", Sat, 08 Jun 2013 18:54:22 UTC +00:00]]
+WARNING: Can't mass-assign protected attributes: word
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Sat, 08 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", 0], ["created_at", Sat, 08 Jun 2013 18:54:22 UTC +00:00], ["failed_count", 0], ["in_chinese", "keai"], ["title", nil], ["updated_at", Sat, 08 Jun 2013 18:54:22 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (13.1ms)[0m  INSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["add_date", Sat, 08 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", 0], ["created_at", Sat, 08 Jun 2013 18:55:37 UTC +00:00], ["failed_count", 0], ["in_chinese", "zuoye"], ["title", "shuti"], ["updated_at", Sat, 08 Jun 2013 18:55:37 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Sat, 08 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", 0], ["created_at", Sat, 08 Jun 2013 18:55:37 UTC +00:00], ["failed_count", 0], ["in_chinese", "keai"], ["title", "kawayi"], ["updated_at", Sat, 08 Jun 2013 18:55:37 UTC +00:00]]
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 21:09:44 +0200
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:09:50 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 79ms
+
+ActionView::Template::Error (undefined method `create_date' for #<Word:0xac7266c>):
+    12:       %tr
+    13:         %td= word.title
+    14:         %td= word.in_chinese
+    15:         %td= word.create_date
+  app/views/words/index.html.haml:15:in `block in _app_views_words_index_html_haml__654884348__642736068'
+  app/views/words/index.html.haml:11:in `each'
+  app/views/words/index.html.haml:11:in `_app_views_words_index_html_haml__654884348__642736068'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.8ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:10:20 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (15.4ms)
+Compiled application.css  (0ms)  (pid 2959)
+Compiled application.js  (2ms)  (pid 2959)
+Compiled jquery.js  (1ms)  (pid 2959)
+Compiled jquery_ujs.js  (0ms)  (pid 2959)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:10:20 +0200
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:10:20 +0200
+Served asset /application.js - 200 OK (67ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:10:20 +0200
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:10:20 +0200
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 21:10:26 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 21:11:00 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:11:05 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:11:05 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:11:05 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:11:05 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:11:05 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:15:04 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:15:04 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:15:04 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:15:04 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:15:04 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:16:48 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 33ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:16:48 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:16:48 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:16:48 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:16:48 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:20:16 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (7.8ms)
+Compiled application.css  (0ms)  (pid 2959)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:20:16 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:20:16 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:20:16 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:20:16 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 21:20:27 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 21:20:44 +0200
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:20:50 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 90ms (Views: 88.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:20:51 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:20:51 +0200
+Served asset /jquery.js - 304 Not Modified (56ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:20:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:20:51 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:27:06 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:27:06 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:06 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:06 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:06 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:27:09 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:27:09 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:09 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:09 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:09 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:27:11 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (43.9ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:27:11 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:11 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:11 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:11 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:27:11 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:27:11 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:11 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:11 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:11 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:27:12 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:27:12 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:12 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:12 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:12 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 21:27:15 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 21:27:18 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:27:30 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:27:30 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:30 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:30 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:30 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:27:33 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:27:33 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:33 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:33 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:27:33 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:35:31 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (6.6ms)
+ERROR: compiling _app_views_layouts_application_html_haml___105893818_83656670 RAISED /home/ubuntu/jcb/app/views/layouts/application.html.haml:15: syntax error, unexpected ':', expecting ')'
+...alse_true_false(( label :word :title, 'Word'
+...                               ^
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:15: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:18: syntax error, unexpected ':', expecting ')'
+...alse_true_false(( label :word :in_chinese, 'Word'
+...                               ^
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:18: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'
+Function body:           def _app_views_layouts_application_html_haml___105893818_83656670(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<!DOCTYPE html>\n<html>\n  <head>\n    <title>JiCiBen</title>\n    #{_hamlout.adjust_tabs(2); 
+
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( stylesheet_link_tag 'application'
+));}\n    #{_hamlout.format_script_false_false_false_true_false_true_false(( javascript_include_tag 'application'
+));}\n    #{_hamlout.format_script_false_false_false_true_false_true_false(( csrf_meta_tags
+));}\n  </head>\n  <body>\n    <h1 class='title'>#{_hamlout.adjust_tabs(1); 
+
+
+_hamlout.format_script_false_true_false_true_false_true_false((link_to "JiCiBen", words_path(:load_all => true)
+));}</h1>\n    <div id='main'>\n      ", 1, false);
+haml_temp =  form_tag movies_path, :method => :post do
+_hamlout.push_text("      #{
+_hamlout.format_script_false_false_false_true_false_true_false(( label :word :title, 'Word'
+));}\n      #{_hamlout.format_script_false_false_false_true_false_true_false(( text_field :word, :title
+));}\n      #{
+_hamlout.format_script_false_false_false_true_false_true_false(( label :word :in_chinese, 'Word'
+));}\n      #{_hamlout.format_script_false_false_false_true_false_true_false(( text_field :word, :in_chinese
+));}\n      #{
+_hamlout.format_script_false_false_false_true_false_true_false(( submit_tag 'Add New Word'
+));}\n", 0, false);end
+_hamlout.buffer << _hamlout.format_script_false_false_false_true_false_false_false(haml_temp);_hamlout.push_text("\n", 0, false);
+
+ if flash[:notice]
+_hamlout.push_text("      <div class='message' id='notice'>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((flash[:notice]
+));}</div>\n", 0, false); elsif flash[:warning]
+_hamlout.push_text("      <div class='message' id='warning'>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((flash[:warning]
+));}</div>\n", 0, false);end
+_hamlout.push_text("      #{_hamlout.format_script_false_false_false_true_false_true_false(( yield
+));}\n    </div>\n  </body>\n</html>\n", -3, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/local/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__319377119__process_action__803212291__callbacks'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/etag.rb:23:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/conditionalget.rb:25:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:195:in `context'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:190:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/sendfile.rb:101:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/runtime.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/lock.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/handler/webrick.rb:59:in `service'
+/usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (/home/ubuntu/jcb/app/views/layouts/application.html.haml:15: syntax error, unexpected ':', expecting ')'
+...alse_true_false(( label :word :title, 'Word'
+...                               ^
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:15: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:18: syntax error, unexpected ':', expecting ')'
+...alse_true_false(( label :word :in_chinese, 'Word'
+...                               ^
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:18: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'):
+    12:     #main
+    13:       = form_tag movies_path, :method => :post do
+    14:         
+    15:         = label :word :title, 'Word'
+    16:         = text_field :word, :title
+    17:         
+    18:         = label :word :in_chinese, 'Word'
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.5ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:36:45 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (6.1ms)
+ERROR: compiling _app_views_layouts_application_html_haml___105893818_90983350 RAISED /home/ubuntu/jcb/app/views/layouts/application.html.haml:15: syntax error, unexpected ':', expecting ')'
+...alse_true_false(( label :word :title, 'Word'
+...                               ^
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:15: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:18: syntax error, unexpected ':', expecting ')'
+...alse_true_false(( label :word :in_chinese, 'Word'
+...                               ^
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:18: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'
+Function body:           def _app_views_layouts_application_html_haml___105893818_90983350(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<!DOCTYPE html>\n<html>\n  <head>\n    <title>JiCiBen</title>\n    #{_hamlout.adjust_tabs(2); 
+
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( stylesheet_link_tag 'application'
+));}\n    #{_hamlout.format_script_false_false_false_true_false_true_false(( javascript_include_tag 'application'
+));}\n    #{_hamlout.format_script_false_false_false_true_false_true_false(( csrf_meta_tags
+));}\n  </head>\n  <body>\n    <h1 class='title'>#{_hamlout.adjust_tabs(1); 
+
+
+_hamlout.format_script_false_true_false_true_false_true_false((link_to "JiCiBen", words_path(:load_all => true)
+));}</h1>\n    <div id='main'>\n      ", 1, false);
+haml_temp =  form_tag words_path, :method => :post do
+_hamlout.push_text("      #{
+_hamlout.format_script_false_false_false_true_false_true_false(( label :word :title, 'Word'
+));}\n      #{_hamlout.format_script_false_false_false_true_false_true_false(( text_field :word, :title
+));}\n      #{
+_hamlout.format_script_false_false_false_true_false_true_false(( label :word :in_chinese, 'Word'
+));}\n      #{_hamlout.format_script_false_false_false_true_false_true_false(( text_field :word, :in_chinese
+));}\n      #{
+_hamlout.format_script_false_false_false_true_false_true_false(( submit_tag 'Add New Word'
+));}\n", 0, false);end
+_hamlout.buffer << _hamlout.format_script_false_false_false_true_false_false_false(haml_temp);_hamlout.push_text("\n", 0, false);
+
+ if flash[:notice]
+_hamlout.push_text("      <div class='message' id='notice'>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((flash[:notice]
+));}</div>\n", 0, false); elsif flash[:warning]
+_hamlout.push_text("      <div class='message' id='warning'>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((flash[:warning]
+));}</div>\n", 0, false);end
+_hamlout.push_text("      #{_hamlout.format_script_false_false_false_true_false_true_false(( yield
+));}\n    </div>\n  </body>\n</html>\n", -3, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/local/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__319377119__process_action__803212291__callbacks'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/etag.rb:23:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/conditionalget.rb:25:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:195:in `context'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:190:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/sendfile.rb:101:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/runtime.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/lock.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/handler/webrick.rb:59:in `service'
+/usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (/home/ubuntu/jcb/app/views/layouts/application.html.haml:15: syntax error, unexpected ':', expecting ')'
+...alse_true_false(( label :word :title, 'Word'
+...                               ^
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:15: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:18: syntax error, unexpected ':', expecting ')'
+...alse_true_false(( label :word :in_chinese, 'Word'
+...                               ^
+/home/ubuntu/jcb/app/views/layouts/application.html.haml:18: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'):
+    12:     #main
+    13:       = form_tag words_path, :method => :post do
+    14:         
+    15:         = label :word :title, 'Word'
+    16:         = text_field :word, :title
+    17:         
+    18:         = label :word :in_chinese, 'Word'
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.6ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:37:06 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 23ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:37:07 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:37:07 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:37:07 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:37:07 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:37:22 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:37:22 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:37:22 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:37:22 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:37:22 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:37:34 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:37:34 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:37:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:37:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:37:34 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:38:17 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:38:17 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:38:17 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:38:17 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:38:17 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:39:11 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:39:11 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:11 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:11 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:11 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:39:13 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:39:13 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:13 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:13 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:13 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:39:14 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:39:14 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:14 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:14 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:39:29 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[35mWord Load (0.6ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:39:29 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:29 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:29 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-08 21:39:30 +0200
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:39:30 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:30 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:30 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:39:30 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-08 21:39:32 +0200
+
+AbstractController::ActionNotFound (The action 'create' could not be found for WordsController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-08 21:41:30 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:7: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:7: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@movie.title} was successfully created."
+  	               ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.4ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-08 21:41:55 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:7: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:7: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@word.title} was successfully created."
+  	               ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.1ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-08 21:41:58 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:7: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:7: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@word.title} was successfully created."
+  	               ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-08 21:42:15 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:7: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:7: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@word.title} was successfully created."
+  	               ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-08 21:45:12 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:7: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:7: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@word.title} was successfully created."
+  	               ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.6ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-08 21:48:04 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:8: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:8: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@word.title} was successfully created."
+  	               ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:48:08 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:8: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:8: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@word.title} was successfully created."
+  	               ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.5ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 21:48:11 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:48:15 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:8: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:8: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@word.title} was successfully created."
+  	               ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:49:49 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:8: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:8: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@word.title} was successfully created."
+  	               ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.2ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:49:50 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:8: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:8: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@word.title} was successfully created."
+  	               ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:50:00 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:8: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:8: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@word.title} was successfully created."
+  	               ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.7ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:50:40 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:8: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:8: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:8: syntax error, unexpected $end, expecting keyword_end
+  	flash[:notice] = "#{@word.title} was successfully created."
+  	                                  ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (59.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (70.6ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:50:53 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:8: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:8: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:8: syntax error, unexpected $end, expecting keyword_end
+    flash[:notice] = "#{@word.title} was successfully created."
+                                      ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:51:28 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:51:29 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:51:29 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:51:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:51:29 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:52:03 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 21:52:03 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 21:52:03 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 21:52:03 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 21:52:03 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-08 21:52:05 +0200
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ijMj7SBroAjlYqY+xaGm8po3lfE2UnBSdGSXLU2gUl0=", "word"=>{"title"=>"", "in_chinese"=>""}, "commit"=>"Add New Word"}
+  [1m[35mSQL (16.6ms)[0m  INSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["add_date", nil], ["attempt_count", nil], ["created_at", Sat, 08 Jun 2013 19:52:05 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Sat, 08 Jun 2013 19:52:05 UTC +00:00]]
+Completed 500 Internal Server Error in 47ms
+
+ActionView::MissingTemplate (Missing template words/create, application/create with {:handlers=>[:erb, :builder, :coffee, :haml], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/home/ubuntu/jcb/app/views"
+):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:53:10 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    12:       %tr
+    13:         %td= word.title
+    14:         %td= word.in_chinese
+    15:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:15:in `block in _app_views_words_index_html_haml___440039318__641501028'
+  app/views/words/index.html.haml:11:in `each'
+  app/views/words/index.html.haml:11:in `_app_views_words_index_html_haml___440039318__641501028'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 21:53:16 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    12:       %tr
+    13:         %td= word.title
+    14:         %td= word.in_chinese
+    15:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:15:in `block in _app_views_words_index_html_haml___440039318__641501028'
+  app/views/words/index.html.haml:11:in `each'
+  app/views/words/index.html.haml:11:in `_app_views_words_index_html_haml___440039318__641501028'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 21:53:20 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 22:15:06 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    12:       %tr
+    13:         %td= word.title
+    14:         %td= word.in_chinese
+    15:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:15:in `block in _app_views_words_index_html_haml___440039318__641501028'
+  app/views/words/index.html.haml:11:in `each'
+  app/views/words/index.html.haml:11:in `_app_views_words_index_html_haml___440039318__641501028'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 22:16:15 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    12:       %tr
+    13:         %td= word.title
+    14:         %td= word.in_chinese
+    15:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:15:in `block in _app_views_words_index_html_haml___440039318__641501028'
+  app/views/words/index.html.haml:11:in `each'
+  app/views/words/index.html.haml:11:in `_app_views_words_index_html_haml___440039318__641501028'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.6ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 22:16:16 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    12:       %tr
+    13:         %td= word.title
+    14:         %td= word.in_chinese
+    15:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:15:in `block in _app_views_words_index_html_haml___440039318__641501028'
+  app/views/words/index.html.haml:11:in `each'
+  app/views/words/index.html.haml:11:in `_app_views_words_index_html_haml___440039318__641501028'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.4ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 22:16:25 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    12:       %tr
+    13:         %td= word.title
+    14:         %td= word.in_chinese
+    15:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:15:in `block in _app_views_words_index_html_haml___440039318__641501028'
+  app/views/words/index.html.haml:11:in `each'
+  app/views/words/index.html.haml:11:in `_app_views_words_index_html_haml___440039318__641501028'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 22:16:26 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    12:       %tr
+    13:         %td= word.title
+    14:         %td= word.in_chinese
+    15:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:15:in `block in _app_views_words_index_html_haml___440039318__641501028'
+  app/views/words/index.html.haml:11:in `each'
+  app/views/words/index.html.haml:11:in `_app_views_words_index_html_haml___440039318__641501028'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.7ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-08 22:16:38 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 25ms (Views: 18.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-08 22:16:38 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-08 22:16:38 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-08 22:16:38 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 22:16:38 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
