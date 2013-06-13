@@ -1358,3 +1358,3652 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-08 22:16:38 +0200
 Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateWords (20130608175942)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("words")
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (28.3ms)[0m  INSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["add_date", Sat, 08 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", 0], ["created_at", Thu, 13 Jun 2013 13:30:07 UTC +00:00], ["failed_count", 0], ["in_chinese", "zuoye"], ["title", "shuti"], ["updated_at", Thu, 13 Jun 2013 13:30:07 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Sat, 08 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", 0], ["created_at", Thu, 13 Jun 2013 13:30:07 UTC +00:00], ["failed_count", 0], ["in_chinese", "keai"], ["title", "kawayi"], ["updated_at", Thu, 13 Jun 2013 13:30:07 UTC +00:00]]
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-13 06:30:26 -0700
+Served asset /rails.png - 200 OK (3ms)
+
+
+Started GET "/jcb" for 127.0.0.1 at 2013-06-13 06:30:33 -0700
+
+ActionController::RoutingError (No route matches [GET] "/jcb"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 06:31:59 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (20.9ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 06:31:59 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 06:31:59 -0700
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 06:31:59 -0700
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 06:31:59 -0700
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-13 06:32:06 -0700
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 06:32:06 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 06:32:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 06:32:06 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 06:32:06 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-13 06:33:47 -0700
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    12:       %tr
+    13:         %td= word.title
+    14:         %td= word.in_chinese
+    15:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:15:in `block in _app_views_words_index_html_haml__150427285_87705960'
+  app/views/words/index.html.haml:11:in `each'
+  app/views/words/index.html.haml:11:in `_app_views_words_index_html_haml__150427285_87705960'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.3ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 06:37:32 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    12:       %tr
+    13:         %td= word.title
+    14:         %td= word.in_chinese
+    15:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:15:in `block in _app_views_words_index_html_haml__150427285_91796480'
+  app/views/words/index.html.haml:11:in `each'
+  app/views/words/index.html.haml:11:in `_app_views_words_index_html_haml__150427285_91796480'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.3ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 06:37:50 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 06:37:50 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 06:37:50 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 06:37:50 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 06:37:50 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 06:43:39 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 06:43:40 -0700
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 06:43:40 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 06:43:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 06:43:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-13 06:47:07 -0700
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 06:47:07 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 06:47:07 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 06:47:07 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 06:47:07 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 06:47:07 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-13 06:47:11 -0700
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 06:47:11 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 21ms (Views: 14.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 06:47:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 06:47:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 06:47:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 06:47:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-13 06:47:29 -0700
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 06:47:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 06:47:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 06:47:29 -0700
+Served asset /application.js - 304 Not Modified (67ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 06:47:29 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-13 07:00:26 -0700
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 07:00:27 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 82ms (Views: 81.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 07:00:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 07:00:27 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 07:00:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 07:00:27 -0700
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 07:02:28 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 07:02:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 07:02:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 07:02:28 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 07:02:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-13 07:45:00 -0700
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 07:45:01 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (40.0ms)
+Completed 200 OK in 218ms (Views: 217.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 07:45:01 -0700
+Served asset /application.css - 200 OK (24ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 07:45:01 -0700
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 07:45:01 -0700
+Served asset /application.js - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 07:45:01 -0700
+Served asset /jquery.js - 200 OK (22ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 07:45:05 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 07:45:05 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 07:45:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 07:45:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 07:45:05 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 07:45:32 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 07:45:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 07:45:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 07:45:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 07:45:32 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 07:46:12 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.0ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 07:46:12 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 07:46:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 07:46:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 07:46:12 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 07:48:40 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 07:48:40 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 07:48:40 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 07:48:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 07:48:40 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 07:55:14 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 07:55:14 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 07:55:15 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 07:55:15 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 07:55:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/new" for 127.0.0.1 at 2013-06-13 07:55:17 -0700
+
+AbstractController::ActionNotFound (The action 'new' could not be found for WordsController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.5ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 07:58:14 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 07:58:15 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 07:58:15 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 07:58:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 07:58:15 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/words/new" for 127.0.0.1 at 2013-06-13 07:58:22 -0700
+
+ActionController::RoutingError (No route matches [POST] "/words/new"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started POST "/words/new" for 127.0.0.1 at 2013-06-13 07:58:25 -0700
+
+ActionController::RoutingError (No route matches [POST] "/words/new"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 07:59:07 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 07:59:07 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 07:59:07 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 07:59:07 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 07:59:07 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 07:59:09 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>""}, "commit"=>"add word"}
+  [1m[36mSQL (102.0ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", nil], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 14:59:09 UTC +00:00], ["failed_count", nil], ["in_chinese", nil], ["title", ""], ["updated_at", Thu, 13 Jun 2013 14:59:09 UTC +00:00]]
+Completed 500 Internal Server Error in 144ms
+
+ActionView::MissingTemplate (Missing template words/create, application/create with {:handlers=>[:erb, :builder, :coffee, :haml], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/home/ubuntu/jcb/app/views"
+):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.3ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:01:13 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    24:       %tr
+    25:         %td= word.title
+    26:         %td= word.in_chinese
+    27:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:27:in `block in _app_views_words_index_html_haml___702077224_86814970'
+  app/views/words/index.html.haml:23:in `each'
+  app/views/words/index.html.haml:23:in `_app_views_words_index_html_haml___702077224_86814970'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:01:28 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    24:       %tr
+    25:         %td= word.title
+    26:         %td= word.in_chinese
+    27:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:27:in `block in _app_views_words_index_html_haml___702077224_76999920'
+  app/views/words/index.html.haml:23:in `each'
+  app/views/words/index.html.haml:23:in `_app_views_words_index_html_haml___702077224_76999920'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (29.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.2ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:01:29 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    24:       %tr
+    25:         %td= word.title
+    26:         %td= word.in_chinese
+    27:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:27:in `block in _app_views_words_index_html_haml___702077224_76999920'
+  app/views/words/index.html.haml:23:in `each'
+  app/views/words/index.html.haml:23:in `_app_views_words_index_html_haml___702077224_76999920'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:01:35 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    20:       %tr
+    21:         %td= word.title
+    22:         %td= word.in_chinese
+    23:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:23:in `block in _app_views_words_index_html_haml___702077224_82781260'
+  app/views/words/index.html.haml:19:in `each'
+  app/views/words/index.html.haml:19:in `_app_views_words_index_html_haml___702077224_82781260'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:01:44 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (39.4ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined method `to_date' for nil:NilClass):
+    20:       %tr
+    21:         %td= word.title
+    22:         %td= word.in_chinese
+    23:         %td= word.add_date.to_date
+  app/views/words/index.html.haml:23:in `block in _app_views_words_index_html_haml___702077224_75325230'
+  app/views/words/index.html.haml:19:in `each'
+  app/views/words/index.html.haml:19:in `_app_views_words_index_html_haml___702077224_75325230'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:04:43 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.5ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:04:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:04:44 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:04:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:04:44 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:05:11 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:05:12 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:05:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:05:12 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:05:12 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:05:43 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:05:43 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:05:43 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:05:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:05:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:05:59 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>""}, "commit"=>"add word"}
+  [1m[35mSQL (16.3ms)[0m  INSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["add_date", nil], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:05:59 UTC +00:00], ["failed_count", nil], ["in_chinese", nil], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:05:59 UTC +00:00]]
+Completed 500 Internal Server Error in 106ms
+
+ActionView::MissingTemplate (Missing template words/create, application/create with {:handlers=>[:erb, :builder, :coffee, :haml], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/home/ubuntu/jcb/app/views"
+):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:09:26 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (41.6ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:09:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:09:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:09:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:09:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:10:00 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (14.3ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:10:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:10:14 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:10:14 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:14 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:14 -0700
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:14 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:10:22 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:10:22 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:22 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:22 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:22 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:10:29 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:29 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:10:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:10:41 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:10:41 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:41 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:10:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:10:44 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:10:44 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:10:44 UTC +00:00]]
+Completed 500 Internal Server Error in 41ms
+
+ActionView::MissingTemplate (Missing template words/create, application/create with {:handlers=>[:erb, :builder, :coffee, :haml], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/home/ubuntu/jcb/app/views"
+):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.3ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:15:27 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:12: syntax error, unexpected $end, expecting keyword_end):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:16:16 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:16:16 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:16:16 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 94ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:16:16 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (20.1ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:16:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:16:16 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:16:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:16:16 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:16:20 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:16:20 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:16:20 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 25ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:16:20 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:16:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:16:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:16:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:16:21 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:17:24 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:17:24 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:17:24 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:17:24 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:17:24 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:17:26 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:17:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:17:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:17:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:17:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:18:04 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"第一个单词", "in_chinese"=>"感觉非常好，“ 真的", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:18:04 UTC +00:00], ["failed_count", nil], ["in_chinese", "感觉非常好，“ 真的"], ["title", "第一个单词"], ["updated_at", Thu, 13 Jun 2013 15:18:04 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 65ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:18:04 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:18:04 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:18:04 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:18:04 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:18:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:20:35 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = "成功将\"#{@word.title}\" 加入记词本!"
+                          ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:21:03 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = '成功将"#{@word.title}" 加入记词本!'
+                          ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:21:06 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = '成功将"#{@word.title}" 加入记词本!'
+                          ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (41.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.3ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:21:36 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = "成功将'#{@word.title}' 加入记词本!"
+                          ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:21:44 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = "成功将#{@word.title} 加入记词本!"
+                          ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:22:02 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = "成功将 加入记词本!"
+                          ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.2ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:22:06 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = "成功将 加入记词本!"
+                          ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:22:35 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = "成功将#{@word.title}加入记词本!"
+                          ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (2.5ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:24:02 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (20.5ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:24:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:24:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:24:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:24:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:24:06 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:24:06 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:24:06 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 50ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:24:06 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:24:06 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:24:06 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:24:06 -0700
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:24:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:25:06 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:25:06 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:25:06 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 49ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:25:06 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:25:06 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:25:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:25:06 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:25:06 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:25:08 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:25:08 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:25:08 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 63ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:25:08 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:25:08 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:25:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:25:08 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:25:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:25:12 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = "成功将#{@word.title}加入记词本!"
+                          ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (30.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.6ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:25:21 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = "#{@word.title}加入记词本!"
+                                        ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.4ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:25:29 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:25:29 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:25:29 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 73ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:25:29 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (16.6ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:25:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:25:29 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:25:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:25:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:25:39 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = "#{@word.title}加入记词本"
+                                        ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:26:11 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = "加入记词本"
+                          ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:28:33 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/words_controller.rb:9: syntax error, unexpected $end, expecting keyword_end
+      flash[:notice] = "成功加入记词本"
+                          ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:30:14 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:30:14 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:30:14 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 41ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:30:14 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.5ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:30:14 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:30:14 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:30:14 -0700
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:30:14 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:31:24 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[36mSQL (3.6ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:31:24 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:31:24 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 71ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:31:24 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    11:     %h1.title= link_to "记词本 JiCiBen.com", words_path(:load_all => true)
+    12:     #main
+    13:       - if flash[:notice]
+    14:         #notice.message= flash[:notice]
+    15:       - elsif flash[:warning]
+    16:         #warning.message= flash[:warning]
+    17: 
+  app/views/layouts/application.html.haml:14:in `_app_views_layouts_application_html_haml__1055975990__642423618'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.7ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:32:20 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:32:20 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:32:20 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 77ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:32:20 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (45.6ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:32:20 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:32:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:32:20 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:32:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:37:28 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:37:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:37:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:37:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:37:28 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:37:34 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (5.2ms)
+Rendered words/index.html.haml within layouts/application (68.7ms)
+Completed 200 OK in 76ms (Views: 74.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:37:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:37:35 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:37:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:37:35 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:38:12 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (2.9ms)
+Rendered words/index.html.haml within layouts/application (15.2ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:38:12 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:38:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:38:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:38:12 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:38:42 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (35.1ms)
+Rendered words/index.html.haml within layouts/application (47.9ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:38:42 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:38:42 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:38:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:38:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:38:53 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (4.1ms)
+Rendered words/index.html.haml within layouts/application (20.1ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:38:53 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:38:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:38:53 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:38:53 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:39:00 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (4.0ms)
+Rendered words/index.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:39:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:39:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:39:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:39:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:39:08 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (2.9ms)
+Rendered words/index.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:39:08 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:39:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:39:08 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:39:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:39:13 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"add word"}
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:39:13 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:39:13 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 37ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:39:13 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (2.9ms)
+Rendered words/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:39:13 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:39:13 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:39:13 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:39:13 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:53:34 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:22: syntax error, unexpected $end, expecting keyword_end):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.5ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:53:55 -0700
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/words_controller.rb:23: syntax error, unexpected $end, expecting keyword_end):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.3ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:54:07 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (3.9ms)
+Rendered words/index.html.haml within layouts/application (21.7ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:54:07 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:54:07 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:54:07 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:54:07 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:54:45 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (8.1ms)
+Rendered words/index.html.haml within layouts/application (24.3ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:54:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:54:46 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:54:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:54:46 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:55:00 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (5.6ms)
+Rendered words/index.html.haml within layouts/application (19.8ms)
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:55:01 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:55:01 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:55:01 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:55:01 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:55:07 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (3.6ms)
+Rendered words/index.html.haml within layouts/application (20.9ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:55:07 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:55:07 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:55:07 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:55:07 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:55:30 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (3.7ms)
+Rendered words/index.html.haml within layouts/application (54.7ms)
+Completed 200 OK in 64ms (Views: 62.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:55:30 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:55:30 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:55:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:55:30 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/11" for 127.0.0.1 at 2013-06-13 08:55:33 -0700
+
+AbstractController::ActionNotFound (The action 'show' could not be found for WordsController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/words/11" for 127.0.0.1 at 2013-06-13 08:57:30 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"11"}
+Rendered words/_editing_form.html.haml (3.4ms)
+Rendered words/show.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:57:30 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:57:30 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:57:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:57:30 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-13 08:58:32 -0700
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (7.3ms)
+Rendered words/index.html.haml within layouts/application (51.2ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:58:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:58:32 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:58:32 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:58:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-13 08:58:52 -0700
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (2.9ms)
+Rendered words/index.html.haml within layouts/application (27.3ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:58:52 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:58:52 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:58:52 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:58:52 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words?load_all=true" for 127.0.0.1 at 2013-06-13 08:59:26 -0700
+  Processing by WordsController#index as HTML
+  Parameters: {"load_all"=>"true"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (4.1ms)
+Rendered words/index.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:59:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:27 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 08:59:29 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"保存"}
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 15:59:29 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 15:59:29 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 35ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:59:29 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (3.1ms)
+Rendered words/index.html.haml within layouts/application (49.3ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:59:30 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:30 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:30 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 08:59:32 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (3.7ms)
+Rendered words/index.html.haml within layouts/application (19.4ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:59:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:32 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/1" for 127.0.0.1 at 2013-06-13 08:59:34 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+Rendered words/_editing_form.html.haml (3.9ms)
+Rendered words/show.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 56ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 08:59:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:34 -0700
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 08:59:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/1" for 127.0.0.1 at 2013-06-13 09:03:46 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+Rendered words/_editing_form.html.haml (2.7ms)
+Rendered words/show.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 10ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:03:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:03:46 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:03:46 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:03:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/1" for 127.0.0.1 at 2013-06-13 09:03:49 -0700
+
+AbstractController::ActionNotFound (The action 'destroy' could not be found for WordsController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.1ms)
+
+
+Started DELETE "/words/1" for 127.0.0.1 at 2013-06-13 09:04:54 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant WordsController::Movie):
+  app/controllers/words_controller.rb:26:in `destroy'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (2.5ms)
+
+
+Started DELETE "/words/1" for 127.0.0.1 at 2013-06-13 09:05:08 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"1"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "words" WHERE "words"."id" = ?  [["id", 1]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 37ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:05:08 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (3.5ms)
+Rendered words/index.html.haml within layouts/application (22.5ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:08 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:08 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:08 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/2" for 127.0.0.1 at 2013-06-13 09:05:13 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"2"}
+Rendered words/_editing_form.html.haml (26.7ms)
+Rendered words/show.html.haml within layouts/application (27.9ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:13 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:13 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:13 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:13 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/2" for 127.0.0.1 at 2013-06-13 09:05:15 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"2"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 2]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 68ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:05:15 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (3.1ms)
+Rendered words/index.html.haml within layouts/application (22.9ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:16 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:16 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/8" for 127.0.0.1 at 2013-06-13 09:05:18 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"8"}
+Rendered words/_editing_form.html.haml (4.4ms)
+Rendered words/show.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:18 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:18 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:18 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:18 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/8" for 127.0.0.1 at 2013-06-13 09:05:20 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"8"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "words" WHERE "words"."id" = ?  [["id", 8]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 30ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:05:21 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (3.3ms)
+Rendered words/index.html.haml within layouts/application (20.2ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:21 -0700
+Served asset /application.js - 304 Not Modified (60ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:21 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/words/9" for 127.0.0.1 at 2013-06-13 09:05:23 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"9"}
+Rendered words/_editing_form.html.haml (3.2ms)
+Rendered words/show.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/9" for 127.0.0.1 at 2013-06-13 09:05:25 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"9"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 9]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 22ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:05:25 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (5.3ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (2.9ms)
+Rendered words/index.html.haml within layouts/application (45.8ms)
+Completed 200 OK in 61ms (Views: 54.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:25 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:25 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:25 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/10" for 127.0.0.1 at 2013-06-13 09:05:27 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"10"}
+Rendered words/_editing_form.html.haml (3.5ms)
+Rendered words/show.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/10" for 127.0.0.1 at 2013-06-13 09:05:29 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"10"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "words" WHERE "words"."id" = ?  [["id", 10]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 30ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:05:29 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (2.8ms)
+Rendered words/index.html.haml within layouts/application (67.7ms)
+Completed 200 OK in 74ms (Views: 72.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:29 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/11" for 127.0.0.1 at 2013-06-13 09:05:31 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"11"}
+Rendered words/_editing_form.html.haml (3.6ms)
+Rendered words/show.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:31 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/11" for 127.0.0.1 at 2013-06-13 09:05:33 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"11"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 11]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 17ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:05:33 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (3.8ms)
+Rendered words/index.html.haml within layouts/application (13.9ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:34 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/12" for 127.0.0.1 at 2013-06-13 09:05:36 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"12"}
+Rendered words/_editing_form.html.haml (7.3ms)
+Rendered words/show.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 12ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:36 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:36 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/12" for 127.0.0.1 at 2013-06-13 09:05:38 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"12"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "words" WHERE "words"."id" = ?  [["id", 12]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 27ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:05:38 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (4.1ms)
+Rendered words/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:38 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:38 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:38 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:38 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/14" for 127.0.0.1 at 2013-06-13 09:05:40 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"14"}
+Rendered words/_editing_form.html.haml (3.2ms)
+Rendered words/show.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:40 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:40 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/14" for 127.0.0.1 at 2013-06-13 09:05:42 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"14"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 14]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 93ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:05:42 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (8.4ms)
+Rendered words/index.html.haml within layouts/application (19.9ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:42 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:42 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:42 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:42 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/15" for 127.0.0.1 at 2013-06-13 09:05:43 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"15"}
+Rendered words/_editing_form.html.haml (3.8ms)
+Rendered words/show.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:43 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:43 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:43 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started DELETE "/words/15" for 127.0.0.1 at 2013-06-13 09:05:45 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"15"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "words" WHERE "words"."id" = ?  [["id", 15]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 27ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:05:45 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.0ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (7.6ms)
+Rendered words/index.html.haml within layouts/application (21.7ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:46 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:46 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/words/16" for 127.0.0.1 at 2013-06-13 09:05:47 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"16"}
+Rendered words/_editing_form.html.haml (4.1ms)
+Rendered words/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:48 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:48 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:48 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:48 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/16" for 127.0.0.1 at 2013-06-13 09:05:51 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"16"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 16]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 29ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:05:51 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (3.9ms)
+Rendered words/index.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:51 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:51 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/17" for 127.0.0.1 at 2013-06-13 09:05:53 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"17"}
+Rendered words/_editing_form.html.haml (2.9ms)
+Rendered words/show.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:53 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:53 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:53 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/17" for 127.0.0.1 at 2013-06-13 09:05:55 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"17"}
+  [1m[36mWord Load (0.0ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "words" WHERE "words"."id" = ?  [["id", 17]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 21ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:05:55 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (3.4ms)
+Rendered words/index.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:55 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:55 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:55 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/words/18" for 127.0.0.1 at 2013-06-13 09:05:57 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"18"}
+Rendered words/_editing_form.html.haml (27.6ms)
+Rendered words/show.html.haml within layouts/application (28.4ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:05:57 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:57 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:57 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:05:57 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/18" for 127.0.0.1 at 2013-06-13 09:06:01 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"18"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "18"]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 18]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 51ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:06:01 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (7.6ms)
+Rendered words/index.html.haml within layouts/application (20.9ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:06:01 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:01 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:01 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:01 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/19" for 127.0.0.1 at 2013-06-13 09:06:03 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"19"}
+Rendered words/_editing_form.html.haml (3.1ms)
+Rendered words/show.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:06:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:03 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:03 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started DELETE "/words/19" for 127.0.0.1 at 2013-06-13 09:06:05 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"19"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "words" WHERE "words"."id" = ?  [["id", 19]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 30ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:06:05 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (2.9ms)
+Rendered words/index.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:06:05 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:05 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:05 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/words/20" for 127.0.0.1 at 2013-06-13 09:06:07 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"20"}
+Rendered words/_editing_form.html.haml (3.7ms)
+Rendered words/show.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:06:07 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:07 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:07 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:07 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/20" for 127.0.0.1 at 2013-06-13 09:06:09 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"20"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "20"]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 20]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 29ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:06:09 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (3.5ms)
+Rendered words/index.html.haml within layouts/application (16.9ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:06:09 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:09 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:09 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/21" for 127.0.0.1 at 2013-06-13 09:06:11 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"21"}
+Rendered words/_editing_form.html.haml (3.7ms)
+Rendered words/show.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:06:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:11 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started DELETE "/words/21" for 127.0.0.1 at 2013-06-13 09:06:13 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"21"}
+  [1m[36mWord Load (0.0ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "21"]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "words" WHERE "words"."id" = ?  [["id", 21]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 57ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:06:13 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.0ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (3.0ms)
+Rendered words/index.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:06:13 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:13 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:13 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:13 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/22" for 127.0.0.1 at 2013-06-13 09:06:15 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"22"}
+Rendered words/_editing_form.html.haml (6.4ms)
+Rendered words/show.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:06:15 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:15 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:15 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/words/22" for 127.0.0.1 at 2013-06-13 09:06:17 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"22"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "22"]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 22]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 66ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:06:17 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (10.3ms)
+Rendered words/index.html.haml within layouts/application (17.5ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:06:18 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:18 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:18 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:18 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 09:06:44 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"整理后：第二词", "in_chinese"=>"哈皮", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"保存"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 16:06:44 UTC +00:00], ["failed_count", nil], ["in_chinese", "哈皮"], ["title", "整理后：第二词"], ["updated_at", Thu, 13 Jun 2013 16:06:44 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 37ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:06:44 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (3.1ms)
+Rendered words/index.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:06:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/3" for 127.0.0.1 at 2013-06-13 09:06:51 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"3"}
+Rendered words/_editing_form.html.haml (3.1ms)
+Rendered words/show.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 11ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:06:51 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:06:51 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/13" for 127.0.0.1 at 2013-06-13 09:07:00 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"13"}
+Rendered words/_editing_form.html.haml (3.3ms)
+Rendered words/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:07:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:07:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:07:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:07:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/3" for 127.0.0.1 at 2013-06-13 09:07:28 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"3"}
+Rendered words/_editing_form.html.haml (3.8ms)
+Rendered words/show.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:07:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:07:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:07:28 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:07:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-13 09:12:35 -0700
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:12:35 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/index.html.haml within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    7: %h2=link_to"单词列表", words_path
+    8: 
+    9: %table#words
+    10:   %thead
+    11:     %tr
+    12:       %th 单词
+    13:       %th 中文释义
+  app/views/words/index.html.haml:10
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:13:37 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/index.html.haml within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    7: %h2=link_to"单词列表", words_path
+    8: 
+    9: %table#words
+    10:   %thead
+    11:     %tr
+    12:       %th 单词
+    13:       %th 中文释义
+  app/views/words/index.html.haml:10
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.3ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:14:43 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (2.8ms)
+Rendered words/index.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:14:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:14:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:14:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:14:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 09:14:46 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"添加"}
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 16:14:47 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 16:14:47 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 42ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:14:47 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.0ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (2.7ms)
+Rendered words/index.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:14:47 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:14:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:14:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:14:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/23" for 127.0.0.1 at 2013-06-13 09:14:51 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"23"}
+Rendered words/_editing_form.html.haml (1.7ms)
+Rendered words/show.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 33ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:14:51 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:14:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:14:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:14:51 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/23" for 127.0.0.1 at 2013-06-13 09:16:25 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"23"}
+Rendered words/_editing_form.html.haml (2.0ms)
+Rendered words/show.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:16:25 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:16:25 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:16:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:16:25 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/3" for 127.0.0.1 at 2013-06-13 09:16:33 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"3"}
+Rendered words/_editing_form.html.haml (2.7ms)
+Rendered words/show.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:16:33 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:16:33 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:16:33 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:16:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/3" for 127.0.0.1 at 2013-06-13 09:20:26 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"3"}
+Rendered words/_editing_form.html.haml (2.1ms)
+Rendered words/show.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:20:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/3" for 127.0.0.1 at 2013-06-13 09:20:37 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"3"}
+Rendered words/_editing_form.html.haml (4.1ms)
+Rendered words/show.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:20:37 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:37 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:37 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:37 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/3" for 127.0.0.1 at 2013-06-13 09:20:38 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"3"}
+Rendered words/_editing_form.html.haml (2.2ms)
+Rendered words/show.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:20:38 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:38 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:38 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:38 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/3" for 127.0.0.1 at 2013-06-13 09:20:55 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"3"}
+Rendered words/_editing_form.html.haml (1.8ms)
+Rendered words/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:20:55 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:55 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:20:55 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/3" for 127.0.0.1 at 2013-06-13 09:21:00 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"3"}
+Rendered words/_editing_form.html.haml (2.0ms)
+Rendered words/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:21:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:21:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:21:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:21:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/words/3" for 127.0.0.1 at 2013-06-13 09:21:11 -0700
+
+ActionController::RoutingError (No route matches [POST] "/words/3"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started POST "/words/3" for 127.0.0.1 at 2013-06-13 09:21:48 -0700
+
+ActionController::RoutingError (No route matches [POST] "/words/3"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started POST "/words/3" for 127.0.0.1 at 2013-06-13 09:22:42 -0700
+
+ActionController::RoutingError (No route matches [POST] "/words/3"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/words/3" for 127.0.0.1 at 2013-06-13 09:22:45 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"3"}
+Rendered words/_editing_form.html.haml (2.2ms)
+Rendered words/show.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:22:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:22:46 -0700
+Served asset /application.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:22:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:22:46 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started PUT "/words/3" for 127.0.0.1 at 2013-06-13 09:22:57 -0700
+  Processing by WordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"宿题", "in_chinese"=>"作业", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"update", "id"=>"3"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "words" SET "title" = '宿题', "in_chinese" = '作业', "add_date" = '2013-06-13 00:00:00.000000', "updated_at" = '2013-06-13 16:22:57.345766' WHERE "words"."id" = 3[0m
+Redirected to http://localhost:3000/words
+Completed 302 Found in 36ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:22:57 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (2.0ms)
+Rendered words/index.html.haml within layouts/application (19.8ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:22:57 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:22:57 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:22:57 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:22:57 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-06-13 09:23:00 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"添加"}
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", Thu, 13 Jun 2013 00:00:00 UTC +00:00], ["attempt_count", nil], ["created_at", Thu, 13 Jun 2013 16:23:00 UTC +00:00], ["failed_count", nil], ["in_chinese", ""], ["title", ""], ["updated_at", Thu, 13 Jun 2013 16:23:00 UTC +00:00]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 82ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:23:00 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/_editing_form.html.haml (2.6ms)
+Rendered words/index.html.haml within layouts/application (21.7ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:23:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:23:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:23:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:23:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/4" for 127.0.0.1 at 2013-06-13 09:23:04 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"4"}
+Rendered words/_editing_form.html.haml (5.4ms)
+Rendered words/show.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:23:04 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:23:04 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:23:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:23:04 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:31:04 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (2.6ms)
+Rendered words/index.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:31:04 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:04 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:04 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/words/3" for 127.0.0.1 at 2013-06-13 09:31:06 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "3"]]
+Rendered words/_editing_form.html.haml (2.2ms)
+Rendered words/show.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:31:06 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:06 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:06 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/6" for 127.0.0.1 at 2013-06-13 09:31:11 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered words/_editing_form.html.haml (9.4ms)
+Rendered words/show.html.haml within layouts/application (51.2ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:31:11 -0700
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/25" for 127.0.0.1 at 2013-06-13 09:31:14 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "25"]]
+Rendered words/_editing_form.html.haml (2.9ms)
+Rendered words/show.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:31:14 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:14 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:14 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started PUT "/words/25" for 127.0.0.1 at 2013-06-13 09:31:52 -0700
+  Processing by WordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"太棒了，现在能 auto populate 了", "in_chinese"=>"超级哈皮", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"update", "id"=>"25"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "25"]]
+  [1m[35m (0.2ms)[0m  UPDATE "words" SET "title" = '太棒了，现在能 auto populate 了', "in_chinese" = '超级哈皮', "updated_at" = '2013-06-13 16:31:53.009768' WHERE "words"."id" = 25
+Redirected to http://localhost:3000/words
+Completed 302 Found in 42ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:31:53 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (2.7ms)
+Rendered words/index.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:31:53 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:53 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:53 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/24" for 127.0.0.1 at 2013-06-13 09:31:57 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "24"]]
+Rendered words/_editing_form.html.haml (2.2ms)
+Rendered words/show.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:31:57 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:57 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:57 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:31:57 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/words/24" for 127.0.0.1 at 2013-06-13 09:32:02 -0700
+  Processing by WordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "word"=>{"title"=>"66", "in_chinese"=>"", "add_date(1i)"=>"2013", "add_date(2i)"=>"6", "add_date(3i)"=>"13"}, "commit"=>"update", "id"=>"24"}
+  [1m[36mWord Load (0.0ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "24"]]
+  [1m[35m (0.2ms)[0m  UPDATE "words" SET "title" = '66', "updated_at" = '2013-06-13 16:32:02.367754' WHERE "words"."id" = 24
+Redirected to http://localhost:3000/words
+Completed 302 Found in 65ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:32:02 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (2.7ms)
+Rendered words/index.html.haml within layouts/application (16.3ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:32:02 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:32:02 -0700
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:32:02 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:32:02 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/words/24" for 127.0.0.1 at 2013-06-13 09:32:05 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "24"]]
+Rendered words/_editing_form.html.haml (4.5ms)
+Rendered words/show.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:32:05 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:32:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:32:05 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:32:05 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started DELETE "/words/24" for 127.0.0.1 at 2013-06-13 09:32:08 -0700
+  Processing by WordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4kiAqhUfsmQ6H8NtDRYq7GEJoy4sxyGEOeifxk9/UWw=", "id"=>"24"}
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "24"]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "words" WHERE "words"."id" = ?  [["id", 24]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 19ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-13 09:32:08 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/_editing_form.html.haml (2.1ms)
+Rendered words/index.html.haml within layouts/application (16.9ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-13 09:32:08 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-13 09:32:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-13 09:32:08 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-13 09:32:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)

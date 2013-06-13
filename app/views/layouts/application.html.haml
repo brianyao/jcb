@@ -8,7 +8,7 @@
   
   %body
     -#= render :partial=>'sessions/login'
-    %h1.title= link_to "JiCiBen", words_path(:load_all => true)
+    %h1.title= link_to "记词本 JiCiBen.com", words_path(:load_all => true)
     #main
       - if flash[:notice]
         #notice.message= flash[:notice]

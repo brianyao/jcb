@@ -1,15 +1,22 @@
 -#  This file is app/views/movies/index.html.haml
-%h2 The very first word list
+%h2 添加新单词
+= form_tag words_path, :method => :post do
+  = render :partial => 'editing_form'
+  %div= submit_tag '添加'
+
+%h2=link_to"单词列表", words_path
 
 %table#words
   %thead
     %tr
-      %th Word
-      %th Translation
-      %th created at
+      %th 单词
+      %th 中文释义
+      %th 编辑
+      %th 创建日期
   %tbody
     - @words.each do |word|
       %tr
         %td= word.title
         %td= word.in_chinese
+        %td= link_to "修改", word_path(word)
         %td= word.add_date
