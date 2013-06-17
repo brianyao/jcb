@@ -51,7 +51,7 @@ table#words th, table#words td {
   padding: 4px;
   text-align: left;
 }
-#notice, #warning {
+#notice, #warning, #error {
   background: rosybrown;
   margin: 1em 0;
   padding: 4px;

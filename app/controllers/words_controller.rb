@@ -1,6 +1,10 @@
 class WordsController < ApplicationController
-  def index
+  def ji
     @words = Word.all
+  end
+
+  def index
+    @words = Word.order("add_date DESC").limit(20)
   end
 
   def show
@@ -14,6 +18,11 @@ class WordsController < ApplicationController
     if @word.save
       # flash[:notice] = "成功将#{@word.title}加入记词本!"
       flash[:notice] = "Added '#{@word.title}'!"
+    else
+      flash[:error] = 'Error:: '
+      for error in @word.errors.full_messages
+        flash[:error] += error
+      end       
     end
     redirect_to words_path
   end

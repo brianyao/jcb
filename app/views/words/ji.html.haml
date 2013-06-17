@@ -1,0 +1,12 @@
+%h2 记！
+%hr
+%table#words
+  %thead
+    %tr
+      %th 单词
+      %th 编辑
+  %tbody
+    - @words.each do |word|
+      %tr
+        %td= word.title
+        %td= link_to "修改", word_path(word)
