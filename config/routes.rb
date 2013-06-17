@@ -13,6 +13,7 @@ Jcb::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :words
+  root :to => "words#home"
   match "/home" => "words#home"
   match "/ji" => "words#ji"
   # Sample resource route with options:
