@@ -12695,3 +12695,65 @@ Served asset /jquery_ujs.js - 304 Not Modified (1ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 20:01:24 +0200
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 20:16:32 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (2.3ms)
+Rendered sessions/_login.html.haml (6.5ms)
+Completed 200 OK in 157ms (Views: 96.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 20:16:33 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 20:16:33 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 20:16:33 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 20:16:33 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 20:16:36 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/words
+Completed 302 Found in 1ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 20:16:36 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/_editing_form.html.haml (7.6ms)
+  [1m[36mWord Load (0.4ms)[0m  [1mSELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (56.0ms)
+Rendered sessions/_login.html.haml (0.5ms)
+Completed 200 OK in 79ms (Views: 64.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 20:16:36 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 20:16:36 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 20:16:36 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 20:16:36 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/login?provider=weibo" for 127.0.0.1 at 2013-06-26 20:16:38 +0200
+
+
+Started GET "/auth/weibo" for 127.0.0.1 at 2013-06-26 20:16:38 +0200
