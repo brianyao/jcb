@@ -5,9 +5,9 @@ html, body {
   margin: 0;
   padding: 0;
   background: White;
-  color: DarkSlateGrey;
+  color: Black;
   font-family: Tahoma, Verdana, sans-serif;
-  font-size: 10pt;
+  font-size: 11pt;
 }
 div#main {
   margin: 0;
@@ -15,7 +15,7 @@ div#main {
 }
 a {
   background: transparent;
-  color: maroon;
+  color: #000033;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -25,15 +25,15 @@ h1 {
   font-style: italic;
   display: block;
   width: 100%;
-  border-bottom: 1px solid DarkSlateGrey;
+  border-bottom: 1px solid Black;
 }
-h1.title {
+h1.title, h1.title a {
   margin: 0 0 1em;
   padding: 10px;
-  background-color: orange;
-  color: white;
-  border-bottom: 4px solid gold;
-  font-size: 2em;
+  background-color: yellowgreen;
+  color: dodgerblue;
+  border-bottom: 4px solid greenyellow;
+  font-size: 1.5em;
   font-style: normal;
 }
 table#words {
@@ -45,7 +45,7 @@ table#words {
 table#words th {
   border: 2px solid white;
   font-weight: bold;
-  background-color: wheat;
+  background-color: yellowgreen;
 }
 table#words th, table#words td {
   padding: 4px;
@@ -60,5 +60,5 @@ form label {
   display: block;
   line-height: 25px;
   font-weight: bold;
-  color: maroon;
+  color: Black;
 }
