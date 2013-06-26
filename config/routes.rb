@@ -19,7 +19,7 @@ Jcb::Application.routes.draw do
 
   get "sessions/create"
   get "sessions/failure"
-  match "/login" => redirect("/auth/weibo"), :as => :login
+  #match "/login" => redirect("/auth/"), :as => :login
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#failure'
   match 'logout' => 'sessions#destroy'

@@ -12757,3 +12757,594 @@ Started GET "/login?provider=weibo" for 127.0.0.1 at 2013-06-26 20:16:38 +0200
 
 
 Started GET "/auth/weibo" for 127.0.0.1 at 2013-06-26 20:16:38 +0200
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 20:36:51 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/_editing_form.html.haml (8.0ms)
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (38.6ms)
+Rendered sessions/_login.html.haml (2.4ms)
+Completed 200 OK in 201ms (Views: 149.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 20:36:52 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 20:36:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 20:36:52 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 20:36:52 +0200
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/login?provider=facebook" for 127.0.0.1 at 2013-06-26 20:36:56 +0200
+
+
+Started GET "/auth/weibo" for 127.0.0.1 at 2013-06-26 20:36:56 +0200
+
+
+Started GET "/login?provider=facebook" for 127.0.0.1 at 2013-06-26 20:39:25 +0200
+
+
+Started GET "/auth/:provider" for 127.0.0.1 at 2013-06-26 20:39:25 +0200
+
+ActionController::RoutingError (No route matches [GET] "/auth/:provider"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/login?provider=facebook" for 127.0.0.1 at 2013-06-26 20:41:56 +0200
+
+
+Started GET "/auth/" for 127.0.0.1 at 2013-06-26 20:41:56 +0200
+
+ActionController::RoutingError (No route matches [GET] "/auth"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/login?provider=facebook" for 127.0.0.1 at 2013-06-26 20:54:41 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"facebook"}
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.[]):
+  app/controllers/sessions_controller.rb:12:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.9ms)
+
+
+Started GET "/login?provider=facebook" for 127.0.0.1 at 2013-06-26 21:01:04 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"facebook"}
+Completed 500 Internal Server Error in 7ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.[]):
+  app/models/user.rb:7:in `create_with_omniauth'
+  app/controllers/sessions_controller.rb:16:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.2ms)
+
+
+Started GET "/login?provider=facebook" for 127.0.0.1 at 2013-06-26 21:02:19 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"facebook"}
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.[]):
+  app/controllers/sessions_controller.rb:12:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.4ms)
+
+
+Started GET "/login?provider=facebook" for 127.0.0.1 at 2013-06-26 21:04:35 +0200
+  Processing by SessionsController#new as HTML
+  Parameters: {"provider"=>"facebook"}
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template sessions/new, application/new with {:handlers=>[:erb, :builder, :coffee, :haml], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/home/ubuntu/jcb/app/views"
+):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/login?provider=facebook" for 127.0.0.1 at 2013-06-26 21:05:26 +0200
+
+ArgumentError (missing :action):
+  config/routes.rb:23:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (36.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.9ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:10:21 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/_editing_form.html.haml (2.9ms)
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (16.7ms)
+Rendered sessions/_login.html.haml (0.8ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (No route matches {:controller=>"sessions", :action=>"new", :provider=>"weibo"}):
+    3:     %p.welcome  Welcome, #{@current_user.name}!
+    4:     = link_to 'Log Out', logout_path
+    5:   - else
+    6:     %p.login= link_to '使用新浪微博登陆', login_path(:provider => 'weibo')
+    7:     %p.login= link_to 'login with Facebook account', login_path(:provider => 'facebook')
+  app/views/sessions/_login.html.haml:6:in `_app_views_sessions__login_html_haml___328005180_92390400'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___206869407_92405610'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:10:30 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (2.2ms)
+Rendered sessions/_login.html.haml (0.8ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (No route matches {:controller=>"sessions", :action=>"new", :provider=>"weibo"}):
+    3:     %p.welcome  Welcome, #{@current_user.name}!
+    4:     = link_to 'Log Out', logout_path
+    5:   - else
+    6:     %p.login= link_to '使用新浪微博登陆', login_path(:provider => 'weibo')
+    7:     %p.login= link_to 'login with Facebook account', login_path(:provider => 'facebook')
+  app/views/sessions/_login.html.haml:6:in `_app_views_sessions__login_html_haml___328005180_92390400'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___206869407_92405610'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:10:55 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.7ms)
+Rendered sessions/_login.html.haml (0.9ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (No route matches {:controller=>"sessions", :action=>"new", :provider=>"weibo"}):
+    3:     %p.welcome  Welcome, #{@current_user.name}!
+    4:     = link_to 'Log Out', logout_path
+    5:   - else
+    6:     %p.login= link_to '使用新浪微博登陆', login_path(:provider => 'weibo')
+    7:     %p.login= link_to 'login with Facebook account', login_path(:provider => 'facebook')
+  app/views/sessions/_login.html.haml:6:in `_app_views_sessions__login_html_haml___328005180_92390400'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___206869407_92405610'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:10:56 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.8ms)
+Rendered sessions/_login.html.haml (1.1ms)
+Completed 500 Internal Server Error in 57ms
+
+ActionView::Template::Error (No route matches {:controller=>"sessions", :action=>"new", :provider=>"weibo"}):
+    3:     %p.welcome  Welcome, #{@current_user.name}!
+    4:     = link_to 'Log Out', logout_path
+    5:   - else
+    6:     %p.login= link_to '使用新浪微博登陆', login_path(:provider => 'weibo')
+    7:     %p.login= link_to 'login with Facebook account', login_path(:provider => 'facebook')
+  app/views/sessions/_login.html.haml:6:in `_app_views_sessions__login_html_haml___328005180_92390400'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___206869407_92405610'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:11:04 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.6ms)
+Rendered sessions/_login.html.haml (0.7ms)
+Completed 200 OK in 14ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:11:04 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:11:04 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:11:05 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:11:05 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:11:13 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.9ms)
+Rendered sessions/_login.html.haml (0.9ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (No route matches {:provider=>"weibo", :controller=>"words", :action=>"home"}):
+    3:     %p.welcome  Welcome, #{@current_user.name}!
+    4:     = link_to 'Log Out', logout_path
+    5:   - else
+    6:     %p.login= link_to '使用新浪微博登陆', login_path(:provider => 'weibo')
+    7:     %p.login= link_to 'login with Facebook account', login_path(:provider => 'facebook')
+  app/views/sessions/_login.html.haml:6:in `_app_views_sessions__login_html_haml___328005180_92390400'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___206869407_92405610'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:12:19 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.7ms)
+Rendered sessions/_login.html.haml (3.1ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (No route matches {:controller=>"words", :action=>"home"}):
+    3:     %p.welcome  Welcome, #{@current_user.name}!
+    4:     = link_to 'Log Out', logout_path
+    5:   - else
+    6:     %p.login= link_to '使用新浪微博登陆', login_path
+    7:     %p.login= link_to 'login with Facebook account', login_path
+  app/views/sessions/_login.html.haml:6:in `_app_views_sessions__login_html_haml___328005180__645462848'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___206869407_92405610'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:12:19 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.3ms)
+Rendered sessions/_login.html.haml (1.8ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (No route matches {:controller=>"words", :action=>"home"}):
+    3:     %p.welcome  Welcome, #{@current_user.name}!
+    4:     = link_to 'Log Out', logout_path
+    5:   - else
+    6:     %p.login= link_to '使用新浪微博登陆', login_path
+    7:     %p.login= link_to 'login with Facebook account', login_path
+  app/views/sessions/_login.html.haml:6:in `_app_views_sessions__login_html_haml___328005180__645462848'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___206869407_92405610'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:15:44 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.8ms)
+Rendered sessions/_login.html.haml (3.4ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (No route matches {:provider=>"weibo", :controller=>"words", :action=>"home"}):
+    3:     %p.welcome  Welcome, #{@current_user.name}!
+    4:     = link_to 'Log Out', logout_path
+    5:   - else
+    6:     %p.login= link_to '使用新浪微博登陆', login_path(:provider => 'weibo')
+    7:     %p.login= link_to 'login with Facebook account', login_path(:provider => 'facebook')
+  app/views/sessions/_login.html.haml:6:in `_app_views_sessions__login_html_haml___328005180__645066708'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___206869407_92405610'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:15:46 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.3ms)
+Rendered sessions/_login.html.haml (0.8ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (No route matches {:provider=>"weibo", :controller=>"words", :action=>"home"}):
+    3:     %p.welcome  Welcome, #{@current_user.name}!
+    4:     = link_to 'Log Out', logout_path
+    5:   - else
+    6:     %p.login= link_to '使用新浪微博登陆', login_path(:provider => 'weibo')
+    7:     %p.login= link_to 'login with Facebook account', login_path(:provider => 'facebook')
+  app/views/sessions/_login.html.haml:6:in `_app_views_sessions__login_html_haml___328005180__645066708'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___206869407_92405610'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:15:47 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.9ms)
+Rendered sessions/_login.html.haml (0.8ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (No route matches {:provider=>"weibo", :controller=>"words", :action=>"home"}):
+    3:     %p.welcome  Welcome, #{@current_user.name}!
+    4:     = link_to 'Log Out', logout_path
+    5:   - else
+    6:     %p.login= link_to '使用新浪微博登陆', login_path(:provider => 'weibo')
+    7:     %p.login= link_to 'login with Facebook account', login_path(:provider => 'facebook')
+  app/views/sessions/_login.html.haml:6:in `_app_views_sessions__login_html_haml___328005180__645066708'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___206869407_92405610'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:15:48 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.8ms)
+Rendered sessions/_login.html.haml (0.8ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (No route matches {:provider=>"weibo", :controller=>"words", :action=>"home"}):
+    3:     %p.welcome  Welcome, #{@current_user.name}!
+    4:     = link_to 'Log Out', logout_path
+    5:   - else
+    6:     %p.login= link_to '使用新浪微博登陆', login_path(:provider => 'weibo')
+    7:     %p.login= link_to 'login with Facebook account', login_path(:provider => 'facebook')
+  app/views/sessions/_login.html.haml:6:in `_app_views_sessions__login_html_haml___328005180__645066708'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___206869407_92405610'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:15:55 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.6ms)
+Rendered sessions/_login.html.haml (0.8ms)
+Completed 200 OK in 16ms (Views: 7.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:15:55 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:15:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:15:55 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:15:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:28:45 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.7ms)
+Rendered sessions/_login.html.haml (1.7ms)
+Completed 200 OK in 17ms (Views: 9.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:28:45 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:28:45 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:28:45 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:28:45 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-06-26 21:28:49 +0200
+
+
+Started GET "/auth/facebook/callback?code=AQBAqOEtl9ozNBNuv3KmEUEDoiCCV6gA27cSbPTmkVoARPcoqaFpripADiLjDGWwApRQkxUKu9zCCrxqA5_g2fmIx9jHwqfrV0E3vqaOddRu7uIk-QL5GvP2CauJ58FLM-v9IUkgrpUvPhDKp-xTP_ntxMKxajX61QkLdtXs691pxza-n1wHJnuIJ4Q4-tOXafy2FaI7Gr8PjdYRt6IXS7haB39TUGhEW94rUCBsHuUgyB_8LMEE9QoSCKn6KwvlFFgCL-9ezMi7GwgkWfFl_TkwHqt3YG1v0fm3JbRatjaBD5khSdb_JcY0Q1lphCELA8U" for 127.0.0.1 at 2013-06-26 21:28:49 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBAqOEtl9ozNBNuv3KmEUEDoiCCV6gA27cSbPTmkVoARPcoqaFpripADiLjDGWwApRQkxUKu9zCCrxqA5_g2fmIx9jHwqfrV0E3vqaOddRu7uIk-QL5GvP2CauJ58FLM-v9IUkgrpUvPhDKp-xTP_ntxMKxajX61QkLdtXs691pxza-n1wHJnuIJ4Q4-tOXafy2FaI7Gr8PjdYRt6IXS7haB39TUGhEW94rUCBsHuUgyB_8LMEE9QoSCKn6KwvlFFgCL-9ezMi7GwgkWfFl_TkwHqt3YG1v0fm3JbRatjaBD5khSdb_JcY0Q1lphCELA8U", "provider"=>"facebook"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001499656133' LIMIT 1
+Redirected to http://localhost:3000/words
+Completed 302 Found in 46ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:28:51 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/_editing_form.html.haml (2.7ms)
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (19.1ms)
+Rendered sessions/_login.html.haml (3.8ms)
+Completed 200 OK in 38ms (Views: 28.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:28:51 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:28:51 +0200
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:28:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:28:51 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 21:28:59 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/words
+Completed 302 Found in 0ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:28:59 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/_editing_form.html.haml (2.6ms)
+  [1m[35mWord Load (0.5ms)[0m  SELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (17.9ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 33ms (Views: 24.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:28:59 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:28:59 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:28:59 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:28:59 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/weibo" for 127.0.0.1 at 2013-06-26 21:29:00 +0200
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:29:33 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/_editing_form.html.haml (3.4ms)
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (19.9ms)
+Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 69ms (Views: 60.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:29:33 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:33 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:33 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:33 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-06-26 21:29:36 +0200
+
+
+Started GET "/auth/facebook/callback?code=AQAF1sCEoe_k2K0Rjyt0uC5xhoXmqseA2irN68wW2bw5u-M1FltW0jopoZwyo3yURfpRkO2uGrUoMJTdzuxelPl3ELW9RMCbfJFZD2ppRd77a4MQZR-nX5KLGJ2pFyFZ-K3a8eAzsF0oQCuQUSPaL_lml99mPYdMjqy73NyFYXnUnZKrv3bJvAG4dxTsaQGyPoAbdokFvlErMkJJCciTO4z41Mfs0Z6yZyI5tMTICzhZ9She78oaokiQFw48pihxJD9QxVvIRzqKWJ7cSSh5pvoqaDoUep50htACmxyVKtIDzgUqaqZyrdpwSqSqeutjLp0" for 127.0.0.1 at 2013-06-26 21:29:36 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAF1sCEoe_k2K0Rjyt0uC5xhoXmqseA2irN68wW2bw5u-M1FltW0jopoZwyo3yURfpRkO2uGrUoMJTdzuxelPl3ELW9RMCbfJFZD2ppRd77a4MQZR-nX5KLGJ2pFyFZ-K3a8eAzsF0oQCuQUSPaL_lml99mPYdMjqy73NyFYXnUnZKrv3bJvAG4dxTsaQGyPoAbdokFvlErMkJJCciTO4z41Mfs0Z6yZyI5tMTICzhZ9She78oaokiQFw48pihxJD9QxVvIRzqKWJ7cSSh5pvoqaDoUep50htACmxyVKtIDzgUqaqZyrdpwSqSqeutjLp0", "provider"=>"facebook"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001499656133' LIMIT 1[0m
+Redirected to http://localhost:3000/words
+Completed 302 Found in 23ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:29:37 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/_editing_form.html.haml (2.6ms)
+  [1m[36mWord Load (0.4ms)[0m  [1mSELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (16.9ms)
+Rendered sessions/_login.html.haml (46.1ms)
+Completed 200 OK in 85ms (Views: 69.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:29:37 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:37 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:37 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:37 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 21:29:42 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.3ms)
+Rendered sessions/_login.html.haml (4.7ms)
+Completed 200 OK in 19ms (Views: 10.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:29:42 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:42 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:42 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:42 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-06-26 21:29:44 +0200
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/ji.html.haml within layouts/application (44.5ms)
+Rendered sessions/_login.html.haml (4.8ms)
+Completed 200 OK in 66ms (Views: 55.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:29:44 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:44 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:44 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:44 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
