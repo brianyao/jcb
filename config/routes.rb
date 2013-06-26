@@ -16,6 +16,13 @@ Jcb::Application.routes.draw do
   root :to => "words#home"
   match "/home" => "words#home"
   match "/ji" => "words#ji"
+
+  get "sessions/create"
+  get "sessions/failure"
+  match "/login" => redirect("/auth/facebook"), :as => :login
+  match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/auth/failure', :to => 'sessions#failure'
+  match 'logout' => 'sessions#destroy'
   # Sample resource route with options:
   #   resources :products do
   #     member do

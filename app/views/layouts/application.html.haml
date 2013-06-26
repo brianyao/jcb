@@ -7,7 +7,7 @@
     = csrf_meta_tags
   
   %body
-    -#= render :partial=>'sessions/login'
+    = render :partial=>'sessions/login'
     %h1.title= link_to "记词本 JiCiBen.com", '/home'
     #main
       - if flash[:error]
