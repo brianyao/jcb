@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   def set_current_user
     # we exploit the fact that find_by_id(nil) returns nil
     @current_user ||= User.find_by_uid(session[:uid])
-    return unless @current_user
+    #return unless @current_user
+    flash[:error] = 'Error-- ' and return unless @current_user
   end
 end

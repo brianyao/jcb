@@ -12,13 +12,13 @@ class SessionsController < ApplicationController
     user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) ||
       User.create_with_omniauth(auth)
     session[:uid] = user.uid
-    redirect_to words_path
+    redirect_to '/'
   end
   
   def destroy
     # reset_session
     session.delete(:uid)
     flash[:notice] = 'Logged out successfully.'
-    redirect_to words_path
+    redirect_to '/'
   end
 end

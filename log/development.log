@@ -13348,3 +13348,1602 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:29:44 +0200
 Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 21:42:50 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/application_controller.rb:10: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/application_controller.rb:10: syntax error, unexpected $end, expecting keyword_end
+    redirect_to login_path and return unless @current_user
+                ^):
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 21:42:56 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/application_controller.rb:10: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/application_controller.rb:10: syntax error, unexpected $end, expecting keyword_end
+    redirect_to login_path and return unless @current_user
+                ^):
+  app/controllers/words_controller.rb:1:in `<top (required)>'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 21:43:34 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/application_controller.rb:10: invalid multibyte char (US-ASCII)
+/home/ubuntu/jcb/app/controllers/application_controller.rb:10: syntax error, unexpected $end, expecting keyword_end
+    redirect_to login_path and return unless @current_user
+                           ^):
+  app/controllers/words_controller.rb:1:in `<top (required)>'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 21:43:47 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (2.3ms)
+Rendered sessions/_login.html.haml (7.9ms)
+Completed 200 OK in 90ms (Views: 63.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:43:48 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:43:48 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:43:48 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:43:48 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 21:43:51 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/words
+Completed 302 Found in 1ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:43:51 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 23ms
+
+NameError (undefined local variable or method `login_path' for #<WordsController:0xb3403c48>):
+  app/controllers/application_controller.rb:10:in `set_current_user'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:14 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:14 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:14 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:14 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:14 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:14 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:14 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:14 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:14 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:14 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:14 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:15 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:15 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:15 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:15 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:15 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:15 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:15 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:15 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:15 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:46:15 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:49:03 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/auth
+Completed 302 Found in 9ms
+
+
+Started GET "/auth" for 127.0.0.1 at 2013-06-26 21:49:03 +0200
+
+ActionController::RoutingError (No route matches [GET] "/auth"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.0ms)
+
+
+Started GET "/auth" for 127.0.0.1 at 2013-06-26 21:49:14 +0200
+
+ActionController::RoutingError (No route matches [GET] "/auth"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 21:49:25 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/auth/facebook
+Completed 302 Found in 10ms
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-06-26 21:49:25 +0200
+
+
+Started GET "/auth/facebook/callback?code=AQBe1gzaDpCIm5ANTvPxysUMDjQRoTCLxkmPKtW1yte7lEBiJeFQrFR72YpQMfy2dPei-iLVQTWiq2DHTqgA5KhzvCEBuHmZLW8X-bxDH491I1TQs0OHFKlCzOi1mwZRTgsvvSWTIFMbP3ikWx9xdk1YFV6e0NqwI-iOTUYkaV9eMEAcRwiCOW3EUVwupGoX3fdJNY26QBZ2V_pK_P9tB8tOvDgjddwPZYPd46ip8ouzEZKhVnkVwieE_hFkqFgdEtpmuD1Kulunj6Sv7-JQxyLJ7kNPxGnIZyfa_ouZ5foRTwTFaFHBtUBOEKDhnWjfZLY" for 127.0.0.1 at 2013-06-26 21:49:26 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBe1gzaDpCIm5ANTvPxysUMDjQRoTCLxkmPKtW1yte7lEBiJeFQrFR72YpQMfy2dPei-iLVQTWiq2DHTqgA5KhzvCEBuHmZLW8X-bxDH491I1TQs0OHFKlCzOi1mwZRTgsvvSWTIFMbP3ikWx9xdk1YFV6e0NqwI-iOTUYkaV9eMEAcRwiCOW3EUVwupGoX3fdJNY26QBZ2V_pK_P9tB8tOvDgjddwPZYPd46ip8ouzEZKhVnkVwieE_hFkqFgdEtpmuD1Kulunj6Sv7-JQxyLJ7kNPxGnIZyfa_ouZ5foRTwTFaFHBtUBOEKDhnWjfZLY", "provider"=>"facebook"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001499656133' LIMIT 1
+Redirected to http://localhost:3000/words
+Completed 302 Found in 15ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:49:27 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/_editing_form.html.haml (7.1ms)
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (27.4ms)
+Rendered sessions/_login.html.haml (4.3ms)
+Completed 200 OK in 46ms (Views: 38.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:49:27 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:27 +0200
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:27 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:27 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:49:30 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.8ms)
+Rendered sessions/_login.html.haml (4.3ms)
+Completed 200 OK in 54ms (Views: 45.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:49:30 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:30 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:30 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:30 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 21:49:33 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/words
+Completed 302 Found in 2ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:49:33 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/auth/facebook
+Completed 302 Found in 9ms
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-06-26 21:49:33 +0200
+
+
+Started GET "/auth/facebook/callback?code=AQCcvWexH1k38nRlE-14vxik4sn8gcqtJy92cEy6GKfnGu2XlodeDlVcMBMvg-Psjkx1ZQRgv4sidr1tF_FTZqF7Njzu76pRS7HTgkf51zkY09V6Dywisgpn9wX5_Bc8s0jeBTyz2UnMM6AcPAWUDuK26k-PVKh2550whumWAqfEiE41a0lc52-q1r_4qqg-kino0ClJfFZaG_tMHD5PWisXYvXxvA5Z0RdrzA1SgCAzXwvyWQMI7yaGg9kqfooW9sLe4reXwLWtjkEVafA31uU5AwEotLvtUNgD8-dV-MN1U6wDXD1eeUU529NM5AhlHWw" for 127.0.0.1 at 2013-06-26 21:49:33 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCcvWexH1k38nRlE-14vxik4sn8gcqtJy92cEy6GKfnGu2XlodeDlVcMBMvg-Psjkx1ZQRgv4sidr1tF_FTZqF7Njzu76pRS7HTgkf51zkY09V6Dywisgpn9wX5_Bc8s0jeBTyz2UnMM6AcPAWUDuK26k-PVKh2550whumWAqfEiE41a0lc52-q1r_4qqg-kino0ClJfFZaG_tMHD5PWisXYvXxvA5Z0RdrzA1SgCAzXwvyWQMI7yaGg9kqfooW9sLe4reXwLWtjkEVafA31uU5AwEotLvtUNgD8-dV-MN1U6wDXD1eeUU529NM5AhlHWw", "provider"=>"facebook"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001499656133' LIMIT 1[0m
+Redirected to http://localhost:3000/words
+Completed 302 Found in 18ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:49:34 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/_editing_form.html.haml (2.8ms)
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (17.6ms)
+Rendered sessions/_login.html.haml (6.8ms)
+Completed 200 OK in 39ms (Views: 30.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:49:34 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:34 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 21:49:36 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/words
+Completed 302 Found in 1ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:49:36 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/auth/facebook
+Completed 302 Found in 48ms
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-06-26 21:49:36 +0200
+
+
+Started GET "/auth/facebook/callback?code=AQD1xhGLRkYxWm73tqxgH-KkhJ5Lctdu65bvI20a0aZnE3wxCnT23c0gx6zzRFtntIUfpMn04g_pDrEdvtFHEe77_oSxqNdMJRM62NPQrkeAodj4Fj5TnT0xmJfkz3o89TD71O6ljGhMDzcugean2RuwIm4xFmI6E-AG0R3Cxnq0FuZgDplF2NGB_fyo12yaF6pCkaHqK85G1fqgYrPOvArLbicOdPd4YG1itTs9wmWuQSvinuiTiy-2KGh8NfWvG7R5NbrpwGJlgBeTVIWNHh4X3crKqwzoL4B1Q4uTrU1tNF7YkAjwVX1d3c7-uNmYsLw" for 127.0.0.1 at 2013-06-26 21:49:37 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQD1xhGLRkYxWm73tqxgH-KkhJ5Lctdu65bvI20a0aZnE3wxCnT23c0gx6zzRFtntIUfpMn04g_pDrEdvtFHEe77_oSxqNdMJRM62NPQrkeAodj4Fj5TnT0xmJfkz3o89TD71O6ljGhMDzcugean2RuwIm4xFmI6E-AG0R3Cxnq0FuZgDplF2NGB_fyo12yaF6pCkaHqK85G1fqgYrPOvArLbicOdPd4YG1itTs9wmWuQSvinuiTiy-2KGh8NfWvG7R5NbrpwGJlgBeTVIWNHh4X3crKqwzoL4B1Q4uTrU1tNF7YkAjwVX1d3c7-uNmYsLw", "provider"=>"facebook"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001499656133' LIMIT 1[0m
+Redirected to http://localhost:3000/words
+Completed 302 Found in 20ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:49:38 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/_editing_form.html.haml (3.4ms)
+  [1m[36mWord Load (0.9ms)[0m  [1mSELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (20.2ms)
+Rendered sessions/_login.html.haml (41.0ms)
+Completed 200 OK in 77ms (Views: 66.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:49:38 +0200
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:38 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:38 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:38 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:49:43 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.7ms)
+Rendered sessions/_login.html.haml (5.7ms)
+Completed 200 OK in 35ms (Views: 20.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:49:43 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:43 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:43 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:43 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:49:48 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (6.1ms)
+Rendered sessions/_login.html.haml (15.3ms)
+Completed 200 OK in 49ms (Views: 28.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:48 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:48 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:49:48 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:49:48 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:50:00 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/home.html.haml within layouts/application (1.4ms)
+Rendered sessions/_login.html.haml (5.5ms)
+Completed 200 OK in 29ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:50:00 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:00 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:00 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:00 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 21:50:01 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/words
+Completed 302 Found in 1ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:50:01 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/_editing_form.html.haml (2.4ms)
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (17.9ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 73ms (Views: 60.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:50:02 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:02 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:02 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:02 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:50:42 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/_editing_form.html.haml (3.1ms)
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (18.0ms)
+Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 32ms (Views: 23.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:50:42 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:42 +0200
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:42 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:42 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 21:50:45 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.7ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 15ms (Views: 7.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:50:46 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:46 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:46 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:46 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-06-26 21:50:47 +0200
+  Processing by WordsController#ji as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/ji.html.haml within layouts/application (11.8ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 28ms (Views: 19.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:50:47 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:47 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:47 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:47 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 21:50:49 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.5ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 16ms (Views: 7.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:50:49 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:49 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:49 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:49 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 21:50:50 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/_editing_form.html.haml (2.9ms)
+  [1m[35mWord Load (0.4ms)[0m  SELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (17.1ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 35ms (Views: 25.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:50:50 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:50 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:50 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:50 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 21:50:52 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.7ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 15ms (Views: 7.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:50:53 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:53 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:53 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:50:53 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 21:51:54 +0200
+
+SyntaxError (/home/ubuntu/jcb/app/controllers/application_controller.rb:10: syntax error, unexpected keyword_and
+    flash[:error] = 'Error:: ' and and return unless @current_user
+                                      ^):
+  app/controllers/words_controller.rb:1:in `<top (required)>'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 21:52:06 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.7ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 16ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:52:06 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:52:06 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:52:06 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:52:06 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:52:13 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (1.2ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 16ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:52:13 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:52:13 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:52:13 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:52:13 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-06-26 21:52:15 +0200
+  Processing by WordsController#ji as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" [0m
+Rendered words/ji.html.haml within layouts/application (8.0ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 23ms (Views: 14.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:52:15 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:52:15 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:52:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:52:15 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 21:53:55 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.6ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 15ms (Views: 6.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 21:53:55 +0200
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 21:53:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 21:53:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 21:53:55 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:00:30 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 24ms
+
+NameError (undefined local variable or method `login_path' for #<WordsController:0xb348363c>):
+  app/controllers/application_controller.rb:10:in `set_current_user'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:00:54 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000sessions/create
+Completed 302 Found in 10ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:00:54 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000sessions/create
+Completed 302 Found in 14ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:00:57 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000sessions/create
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:00:58 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000sessions/create
+Completed 302 Found in 21ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:01:21 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/sessions/create
+Completed 302 Found in 11ms
+
+
+Started GET "/sessions/create" for 127.0.0.1 at 2013-06-26 22:01:21 +0200
+  Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 11ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.[]):
+  app/controllers/sessions_controller.rb:12:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:01:29 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/sessions/create
+Completed 302 Found in 8ms
+
+
+Started GET "/sessions/create" for 127.0.0.1 at 2013-06-26 22:01:30 +0200
+  Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.[]):
+  app/controllers/sessions_controller.rb:12:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:01:54 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 60ms
+
+NameError (undefined local variable or method `login_path' for #<WordsController:0xb2ee5b6c>):
+  app/controllers/application_controller.rb:10:in `set_current_user'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:02:19 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 27ms
+
+NoMethodError (undefined method `login_path' for #<WordsController:0xb367d208>):
+  app/controllers/application_controller.rb:10:in `set_current_user'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:02:20 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 24ms
+
+NoMethodError (undefined method `login_path' for #<WordsController:0xb3f80f58>):
+  app/controllers/application_controller.rb:10:in `set_current_user'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:02:21 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 59ms
+
+NoMethodError (undefined method `login_path' for #<WordsController:0xb31ef1dc>):
+  app/controllers/application_controller.rb:10:in `set_current_user'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:03:52 +0200
+
+SyntaxError (/home/ubuntu/jcb/config/routes.rb:22: syntax error, unexpected ':', expecting keyword_end
+  match "/login"  :as => :login
+                   ^):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:05:59 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Completed 302 Found in 9ms
+
+
+Started GET "/login" for 127.0.0.1 at 2013-06-26 22:05:59 +0200
+  Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.[]):
+  app/controllers/sessions_controller.rb:12:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:07:18 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Completed 404 Not Found in 9ms
+
+ActionController::RoutingError (No route matches {:controller=>"sessions", :action=>"create"}):
+  app/controllers/application_controller.rb:10:in `set_current_user'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:07:47 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.8ms)
+Rendered sessions/_login.html.haml (0.4ms)
+Completed 200 OK in 54ms (Views: 7.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:07:48 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:07:48 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:07:48 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:07:48 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-06-26 22:07:53 +0200
+
+
+Started GET "/auth/facebook/callback?code=AQCDMLUDYvPjvqw5shlPxxtn8D2WU0jOK2U-W7_7987fcOFuQpT-oMLoPkMQxjilnzLZW74fcZaWdI4yeYSbjwQrVw8jHWCMafaZO1W1YMlmnDAcT2XKeimOqyKc3d4XH0C8KhxP1XPZElHAua8e2iJ8KTeiRWNyZEEs8RxLQ3_WdNyEav6pgyLW1klNLF45yByTimRoTRwI7-7FO-JAV7Uy3oP8B3hibMcbOEYkrLzC51GIlHZMbUavoWGsa0o0DDkufLk9hWdUVcHOxQK1CcITRfaSp7z8pOsUOc7-PZzbbd4b3YW76ufxYlcl374UXxo" for 127.0.0.1 at 2013-06-26 22:07:54 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCDMLUDYvPjvqw5shlPxxtn8D2WU0jOK2U-W7_7987fcOFuQpT-oMLoPkMQxjilnzLZW74fcZaWdI4yeYSbjwQrVw8jHWCMafaZO1W1YMlmnDAcT2XKeimOqyKc3d4XH0C8KhxP1XPZElHAua8e2iJ8KTeiRWNyZEEs8RxLQ3_WdNyEav6pgyLW1klNLF45yByTimRoTRwI7-7FO-JAV7Uy3oP8B3hibMcbOEYkrLzC51GIlHZMbUavoWGsa0o0DDkufLk9hWdUVcHOxQK1CcITRfaSp7z8pOsUOc7-PZzbbd4b3YW76ufxYlcl374UXxo", "provider"=>"facebook"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001499656133' LIMIT 1[0m
+Redirected to http://localhost:3000/words
+Completed 302 Found in 21ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 22:07:55 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/_editing_form.html.haml (2.5ms)
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (53.3ms)
+Rendered sessions/_login.html.haml (5.1ms)
+Completed 200 OK in 77ms (Views: 68.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:07:55 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:07:55 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:07:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:07:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:08:15 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.7ms)
+Rendered sessions/_login.html.haml (4.9ms)
+Completed 200 OK in 20ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:08:15 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:15 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:15 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 22:08:17 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/words
+Completed 302 Found in 1ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 22:08:17 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/_editing_form.html.haml (3.4ms)
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (20.7ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 36ms (Views: 27.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:08:18 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:18 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:18 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:18 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-06-26 22:08:19 +0200
+
+
+Started GET "/auth/facebook/callback?code=AQAooNgJab3PtCu_dbBzZQ2RZ_vHAtYyN3-YUdsEdsh6iWpk6iA-HaW5ml2kYjqrLAgzMwgveKYxexujfx7UejSjjJPQShX0KhvlEJZegGTZ6Mi3DkRHpktLAZPwGQd-h38zvYYcc_F3qJoA_FZD_q57JNc7S71TrtArD4BZO-kimdz30nvvp7ZmONi23VdMJCDhJInipc7EX3KJoknp1uxShHpW8A36vfw_JKOvA0E7ebd-PEcabEKOuLaPy-AnFEteEaMhs98VG_b1OdqNvGzaPeR0G3hWIg9S23xJKyplgu4TwwPyPDTZYOQ2f8VFEZc" for 127.0.0.1 at 2013-06-26 22:08:20 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAooNgJab3PtCu_dbBzZQ2RZ_vHAtYyN3-YUdsEdsh6iWpk6iA-HaW5ml2kYjqrLAgzMwgveKYxexujfx7UejSjjJPQShX0KhvlEJZegGTZ6Mi3DkRHpktLAZPwGQd-h38zvYYcc_F3qJoA_FZD_q57JNc7S71TrtArD4BZO-kimdz30nvvp7ZmONi23VdMJCDhJInipc7EX3KJoknp1uxShHpW8A36vfw_JKOvA0E7ebd-PEcabEKOuLaPy-AnFEteEaMhs98VG_b1OdqNvGzaPeR0G3hWIg9S23xJKyplgu4TwwPyPDTZYOQ2f8VFEZc", "provider"=>"facebook"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001499656133' LIMIT 1[0m
+Redirected to http://localhost:3000/words
+Completed 302 Found in 19ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 22:08:21 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/_editing_form.html.haml (4.1ms)
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (20.3ms)
+Rendered sessions/_login.html.haml (6.4ms)
+Completed 200 OK in 79ms (Views: 33.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:08:21 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:21 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:21 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 22:08:55 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/words
+Completed 302 Found in 1ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 22:08:55 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/_editing_form.html.haml (3.4ms)
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (54.8ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 68ms (Views: 60.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:08:55 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:55 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-06-26 22:08:57 +0200
+
+
+Started GET "/auth/facebook/callback?code=AQA199znOcXEZQIYdJSvsfR7EqpzzIQL8rVRQK-s-UVHjkY2Cd3-dv8iq_-S9ab-XsORaFAv5s_H_6Xe56_Sc5ycRxPT0K7wMRtFhndRCrS2PqudUcxsDcdD3hKaiqgvCmisPKVHa6-zhsUZNEelsj-r8Ef5KBdi4Rvh8xwDvsinoTk4qLD3wZgrOfA4QFNhdAXqt5VSGt9rXNmEXeZp6wiU3_GdkY01zFnUCt0KXpIEyPh1sukvECZ8LpUbHmd8Jds03I0tH9UToN0eDYFBc-u-Kl7oYX53FJZhUMZ3BvJhqxi9-SbNKvJrfldomiFkPRY" for 127.0.0.1 at 2013-06-26 22:08:57 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA199znOcXEZQIYdJSvsfR7EqpzzIQL8rVRQK-s-UVHjkY2Cd3-dv8iq_-S9ab-XsORaFAv5s_H_6Xe56_Sc5ycRxPT0K7wMRtFhndRCrS2PqudUcxsDcdD3hKaiqgvCmisPKVHa6-zhsUZNEelsj-r8Ef5KBdi4Rvh8xwDvsinoTk4qLD3wZgrOfA4QFNhdAXqt5VSGt9rXNmEXeZp6wiU3_GdkY01zFnUCt0KXpIEyPh1sukvECZ8LpUbHmd8Jds03I0tH9UToN0eDYFBc-u-Kl7oYX53FJZhUMZ3BvJhqxi9-SbNKvJrfldomiFkPRY", "provider"=>"facebook"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001499656133' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:08:58 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (1.3ms)
+Rendered sessions/_login.html.haml (4.7ms)
+Completed 200 OK in 21ms (Views: 12.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:08:58 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:58 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:58 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:08:58 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 22:09:00 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/words
+Completed 302 Found in 1ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-06-26 22:09:00 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/_editing_form.html.haml (3.0ms)
+  [1m[36mWord Load (0.4ms)[0m  [1mSELECT "words".* FROM "words" ORDER BY add_date DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (27.7ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 43ms (Views: 33.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:09:00 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:00 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:00 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:00 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:09:34 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.7ms)
+Rendered sessions/_login.html.haml (0.1ms)
+Completed 200 OK in 52ms (Views: 6.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:09:35 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:35 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:35 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:35 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-06-26 22:09:37 +0200
+
+
+Started GET "/auth/facebook/callback?code=AQDm013TEza7uULuC80wMD4lgne2Q8TOFFFYofE9xaplMssMX4erDaO47LrGoD_lolkzGNZkEci6tgjiiyPGp9B4r8VQOjm8VM_t3KHVZNY78VCYvgv486y1-T1Lkstq3XncHCZQIKFn5G0PcnRGy69tIL_fRzsOCtzwNi_PhFitbI0oGEKWjJfbrXheaOdcSNuv_TB2qVcErAepNWlmU6ITwy9N_OMAfn6oOEgkKq6pGTWQo5aX6EJBL47aAYTs-YNYcTrbamFxz2QsLd06kFy6kE0tTGpGYzLj46PMeAejr1JBt3k6aZAr0NnfGgwM_jo" for 127.0.0.1 at 2013-06-26 22:09:37 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDm013TEza7uULuC80wMD4lgne2Q8TOFFFYofE9xaplMssMX4erDaO47LrGoD_lolkzGNZkEci6tgjiiyPGp9B4r8VQOjm8VM_t3KHVZNY78VCYvgv486y1-T1Lkstq3XncHCZQIKFn5G0PcnRGy69tIL_fRzsOCtzwNi_PhFitbI0oGEKWjJfbrXheaOdcSNuv_TB2qVcErAepNWlmU6ITwy9N_OMAfn6oOEgkKq6pGTWQo5aX6EJBL47aAYTs-YNYcTrbamFxz2QsLd06kFy6kE0tTGpGYzLj46PMeAejr1JBt3k6aZAr0NnfGgwM_jo", "provider"=>"facebook"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001499656133' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:09:38 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/home.html.haml within layouts/application (1.2ms)
+Rendered sessions/_login.html.haml (4.4ms)
+Completed 200 OK in 20ms (Views: 12.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:09:38 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:38 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:38 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:38 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 22:09:43 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:09:43 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.8ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 18ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:43 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:43 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:09:43 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:09:43 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:10 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:10 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:11 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:11 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:11 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:11 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:11 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:11 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:11 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:11 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:11 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:11 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:11 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:12 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:12 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:12 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:12 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:12 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:12 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:12 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:12 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:10:26 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Completed 404 Not Found in 13ms
+
+ActionController::RoutingError (No route matches {:controller=>"sessions", :action=>"create"}):
+  app/controllers/application_controller.rb:11:in `set_current_user'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:11:49 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (1.3ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 16ms (Views: 7.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:11:49 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:49 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:49 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:49 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:11:51 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (1.1ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 15ms (Views: 6.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:11:51 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:51 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:51 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-06-26 22:11:54 +0200
+
+
+Started GET "/auth/facebook/callback?code=AQBkQ7yrrzmSPY13_X9okZJtveiT-jr3wwGnJK7w8B9ogZvse5BpumR05W0qkErIYTbfRCOwqfZ29bkY_g8jxFOg2WX5UK1mKVP2_HugTHKYGpFSIwLyl7Wu5ZWKiJazdgHwcxMAsd8bkJHWeaRKjkN08UJW48M_hBc9xn9Ylex1sYAItMu8gtcT7XMd9Oo8014qMLTkr87m6XzjBsTG1u7hM0hgGX5CZCGdh4SVwxy9LddKp27giecno01r7r--juX63U5TfgzKcFczfQgcyiU64FNic2MITJHDRsFOJcLvp7V37pikDJ4fOinEMeUEUv0" for 127.0.0.1 at 2013-06-26 22:11:54 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBkQ7yrrzmSPY13_X9okZJtveiT-jr3wwGnJK7w8B9ogZvse5BpumR05W0qkErIYTbfRCOwqfZ29bkY_g8jxFOg2WX5UK1mKVP2_HugTHKYGpFSIwLyl7Wu5ZWKiJazdgHwcxMAsd8bkJHWeaRKjkN08UJW48M_hBc9xn9Ylex1sYAItMu8gtcT7XMd9Oo8014qMLTkr87m6XzjBsTG1u7hM0hgGX5CZCGdh4SVwxy9LddKp27giecno01r7r--juX63U5TfgzKcFczfQgcyiU64FNic2MITJHDRsFOJcLvp7V37pikDJ4fOinEMeUEUv0", "provider"=>"facebook"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001499656133' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 57ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:11:55 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.7ms)
+Rendered sessions/_login.html.haml (4.4ms)
+Completed 200 OK in 22ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:11:56 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:56 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:56 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:56 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-06-26 22:11:57 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-26 22:11:57 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1
+Rendered words/home.html.haml within layouts/application (0.8ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 59ms (Views: 6.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:11:57 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:57 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:57 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:11:57 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-06-26 22:12:04 +0200
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" 
+Rendered words/ji.html.haml within layouts/application (10.5ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 30ms (Views: 16.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 22:12:04 +0200
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 22:12:04 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 22:12:04 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 22:12:04 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
