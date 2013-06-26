@@ -12599,3 +12599,99 @@ Served asset /jquery.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 19:42:19 +0200
 Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 19:52:33 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (2.2ms)
+Rendered sessions/_login.html.haml (7.2ms)
+Completed 200 OK in 127ms (Views: 99.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 19:52:34 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 19:52:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 19:52:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 19:52:34 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 19:54:53 +0200
+  Processing by WordsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/home.html.haml within layouts/application (1.3ms)
+Rendered sessions/_login.html.haml (5.5ms)
+Completed 200 OK in 23ms (Views: 15.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 19:54:53 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 19:54:53 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 19:54:53 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 19:54:53 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 19:54:55 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (0.7ms)
+Rendered sessions/_login.html.haml (5.3ms)
+Completed 200 OK in 21ms (Views: 11.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 19:54:55 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 19:54:55 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 19:54:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 19:54:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-26 20:01:22 +0200
+  Processing by WordsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/home.html.haml within layouts/application (2.8ms)
+Rendered sessions/_login.html.haml (8.0ms)
+Completed 200 OK in 123ms (Views: 98.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-26 20:01:24 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-26 20:01:24 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-26 20:01:24 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-26 20:01:24 +0200
+Served asset /application.js - 304 Not Modified (0ms)
