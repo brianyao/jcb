@@ -1,2 +1,5 @@
 %h2 单词
-=@word.title
+%h3#word= @word.title
+%h3#in_chinese= @word.in_chinese
+= button_to '真记得:D', '/ji'
+= button_to '其实记不得:(', '/ji'
