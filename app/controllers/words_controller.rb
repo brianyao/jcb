@@ -12,17 +12,18 @@ class WordsController < ApplicationController
   public
 
   def ji
-    @words = Word.where("user_id = ?", @current_user).order("add_date DESC").limit(20)
+    @words = Word.where("user_id = ?", @current_user).order("updated_at DESC").limit(20)
   end
 
   def index
     # @words = Word.order("add_date DESC").limit(20)
-    @words = Word.where("user_id = ?", @current_user).order("add_date DESC").limit(20)
+    @words = Word.where("user_id = ?", @current_user).order("updated_at DESC").limit(20)
   end
 
   def show
     id = params[:id] # retrieve movie ID from URI route
     @word = Word.find(id) # look up movie by unique ID
+    @word.updated_at = Time.now
     # will render app/views/movies/show.<extension> by default
   end
 
@@ -44,7 +45,7 @@ class WordsController < ApplicationController
   def update
   	@word = Word.find params[:id]
   	if @word.update_attributes params[:word]
-  		flash[:notice] = "#{@word.title} was updated!"
+  		flash[:notice] = "“#{@word.title}”成功更新！"
   		redirect_to words_path
   	else
   		render :partial => 'editing_form'
