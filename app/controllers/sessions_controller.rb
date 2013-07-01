@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
   # user shouldn't have to be logged in before logging in!
-  skip_before_filter :set_current_user
+  skip_before_filter :require_login, :only => [:home, :create]
+
+  def home
+    @current_user ||= User.find_by_uid(session[:uid])
+  end
 
   def failure
   end
