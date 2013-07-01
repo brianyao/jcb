@@ -42,13 +42,22 @@ class WordsController < ApplicationController
     redirect_to words_path
   end
 
+  def edit
+    @word = Word.find params[:id]
+    @word.updated_at = Time.now
+  end
+
   def update
   	@word = Word.find params[:id]
   	if @word.update_attributes params[:word]
   		flash[:notice] = "“#{@word.title}”成功更新！"
   		redirect_to words_path
   	else
-  		render :partial => 'editing_form'
+      lash[:error] = 'Error:: '
+      for error in @word.errors.full_messages
+        flash[:error] += error
+      end
+  		redirect_to edit_word_path(@word)
   	end
   end
 

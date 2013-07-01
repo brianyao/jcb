@@ -1,8 +1,2 @@
-%h2 单词编辑
-= form_tag word_path(@word), :method => :put do
-  = render :partial => "editing_form"
-  = label :word, :add_date, '修改最近更新时间'
-  = datetime_select :word, :updated_at, :use_month_numbers => true
-  %div
-    = submit_tag 'update'
-= button_to 'Delete', word_path(@word), :method => :delete, :confirm => 'Are you sure?'
+%h2 单词
+=@word.title

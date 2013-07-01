@@ -4,9 +4,13 @@
   %thead
     %tr
       %th 单词
+      %th :D
+      %th :(
       %th 编辑
   %tbody
     - @words.each do |word|
       %tr
         %td= word.title
-        %td= link_to "修改", word_path(word)
+        %td= link_to "记得啊！", word_path(word)
+        %td= link_to "忘记了！", word_path(word)
+        %td= link_to "修改", edit_word_path(word)
