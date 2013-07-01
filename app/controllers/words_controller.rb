@@ -1,10 +1,23 @@
+#!/bin/env ruby
+# encoding: utf-8
 class WordsController < ApplicationController
+  before_filter :has_user, :except => [:index, :create]
+  protected
+  def has_user
+    unless @current_user
+      flash[:warning] = '请先登录从而使用记词本功能。'
+      redirect_to word_path(params[:word_id])
+    end
+  end
+  public
+
   def ji
-    @words = Word.all
+    @words = Word.where("user_id = ?", @current_user).order("add_date DESC").limit(20)
   end
 
   def index
-    @words = Word.order("add_date DESC").limit(20)
+    # @words = Word.order("add_date DESC").limit(20)
+    @words = Word.where("user_id = ?", @current_user).order("add_date DESC").limit(20)
   end
 
   def show
@@ -15,6 +28,7 @@ class WordsController < ApplicationController
 
   def create
     @word = Word.new(params[:word])
+    @word.user = @current_user
     if @word.save
       # flash[:notice] = "成功将#{@word.title}加入记词本!"
       flash[:notice] = "Added '#{@word.title}'!"
