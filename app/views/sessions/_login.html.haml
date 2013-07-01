@@ -3,5 +3,6 @@
     %p.welcome  Welcome, #{@current_user.name}!
     = link_to 'Log Out', logout_path
   - else
+    %p.login= link_to '使用腾讯QQ登陆', "/auth/qq_connect"
     %p.login= link_to '使用新浪微博登陆', "/auth/weibo"
     %p.login= link_to 'login with Facebook account', "/auth/facebook"

@@ -27,6 +27,7 @@ gem 'jquery-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'  
 gem 'omniauth-weibo-oauth2'
+gem 'omniauth-qq-connect'
 # gem 'omniauth-twitter'
 # gem 'omniauth-facebook'
 # Use unicorn as the web server
