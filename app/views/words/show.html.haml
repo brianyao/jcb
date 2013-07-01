@@ -1,5 +1,8 @@
 %h2 单词
 %h3#word= @word.title
 %h3#in_chinese= @word.in_chinese
-= button_to '真记得:D', '/ji'
-= button_to '其实记不得:(', '/ji'
+- if @recall == true
+  = button_to '真记得:D', '/ji'
+  = button_to '其实记不得:(', '/ji'
+- else
+  = button_to '下次记得:p', '/ji'

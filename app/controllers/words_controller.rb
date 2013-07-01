@@ -23,6 +23,7 @@ class WordsController < ApplicationController
   def show
     id = params[:id] # retrieve movie ID from URI route
     @word = Word.find(id) # look up movie by unique ID
+    @recall = params[:recall]
     # will render app/views/movies/show.<extension> by default
   end
 
