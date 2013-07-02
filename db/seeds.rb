@@ -10,9 +10,9 @@
 # Seed the jcb DB with some words.
 more_words = [
   {:title => 'shuti', :in_chinese => 'zuoye',
-  	:attempt_count => 0, :failed_count => 0, :add_date => '8-Jun-2013'},
+  	:attempt_count => 0, :failed_count => 0, :add_date => '8-Jun-2013', :user_id => 1},
   {:title => 'kawayi', :in_chinese => 'keai',
-  	:attempt_count => 0, :failed_count => 0, :add_date => '8-Jun-2013'}
+  	:attempt_count => 0, :failed_count => 0, :add_date => '8-Jun-2013', :user_id => 1}
 ]
 # NOTE: the following line temporarily allows mass assignment
 # (needed if you used attr_accessible/attr_protected in word.rb)
