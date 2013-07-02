@@ -33294,3 +33294,795 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:55:59 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-02 07:59:03 -0700
+  Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/home.html.haml within layouts/application (2.1ms)
+Rendered sessions/_login.html.haml (5.2ms)
+Completed 200 OK in 167ms (Views: 73.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:04 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:04 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:04 -0700
+Served asset /jquery.js - 304 Not Modified (28ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-02 07:59:08 -0700
+  Processing by WordsController#ji as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20[0m
+Rendered words/ji.html.haml within layouts/application (8.9ms)
+Rendered sessions/_login.html.haml (0.4ms)
+Completed 200 OK in 32ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:08 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:08 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-02 07:59:10 -0700
+  Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/home.html.haml within layouts/application (0.2ms)
+Rendered sessions/_login.html.haml (4.1ms)
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:10 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:10 -0700
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:10 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-07-02 07:59:10 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/_editing_form.html.haml (1.2ms)
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (36.5ms)
+Rendered sessions/_login.html.haml (0.4ms)
+Completed 200 OK in 50ms (Views: 41.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:11 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-02 07:59:13 -0700
+  Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/home.html.haml within layouts/application (0.5ms)
+Rendered sessions/_login.html.haml (3.7ms)
+Completed 200 OK in 19ms (Views: 9.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:13 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:13 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:13 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:13 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-02 07:59:14 -0700
+  Processing by WordsController#ji as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20[0m
+Rendered words/ji.html.haml within layouts/application (9.6ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 53ms (Views: 14.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:14 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:14 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:14 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-02 07:59:24 -0700
+  Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/home.html.haml within layouts/application (0.5ms)
+Rendered sessions/_login.html.haml (3.8ms)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:24 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:24 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:24 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:24 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-02 07:59:26 -0700
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20
+Rendered words/ji.html.haml within layouts/application (7.5ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 53ms (Views: 14.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:26 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-02 07:59:28 -0700
+  Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/home.html.haml within layouts/application (0.4ms)
+Rendered sessions/_login.html.haml (3.9ms)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:29 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-07-02 07:59:29 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/_editing_form.html.haml (0.3ms)
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (7.8ms)
+Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 24ms (Views: 11.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:29 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:29 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-02 07:59:31 -0700
+  Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/home.html.haml within layouts/application (0.8ms)
+Rendered sessions/_login.html.haml (3.0ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:32 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-02 07:59:40 -0700
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20
+Rendered words/ji.html.haml within layouts/application (6.2ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 19ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 07:59:40 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:40 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 07:59:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-02 08:05:56 -0700
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY (failed_count) DESC LIMIT 20
+Rendered words/ji.html.haml within layouts/application (33.6ms)
+Rendered sessions/_login.html.haml (0.4ms)
+Completed 200 OK in 50ms (Views: 38.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:05:56 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:05:56 -0700
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:05:56 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:05:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-02 08:06:30 -0700
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY (failed_count - attempt_count) DESC LIMIT 20
+Rendered words/ji.html.haml within layouts/application (8.0ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 22ms (Views: 14.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:06:30 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:06:30 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:06:30 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:06:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-02 08:07:11 -0700
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY (failed_count - attempt_count, updated_at) DESC LIMIT 20
+SQLite3::SQLException: near ",": syntax error: SELECT  "words".* FROM "words"  WHERE (user_id = 1) ORDER BY (failed_count - attempt_count, updated_at) DESC LIMIT 20
+Rendered words/ji.html.haml within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (SQLite3::SQLException: near ",": syntax error: SELECT  "words".* FROM "words"  WHERE (user_id = 1) ORDER BY (failed_count - attempt_count, updated_at) DESC LIMIT 20):
+    9:       %th 编辑
+    10:       %th 记:忘
+    11:   %tbody
+    12:     - @words.each do |word|
+    13:       %tr
+    14:         %td= word.title
+    15:         %td= link_to "记得啊！", word_path(word, :recall => 'yes')
+  app/views/words/ji.html.haml:12:in `_app_views_words_ji_html_haml__91154932_91514200'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-02 08:07:28 -0700
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY (failed_count - attempt_count) DESC, updated_at LIMIT 20
+Rendered words/ji.html.haml within layouts/application (9.8ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 48ms (Views: 14.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:07:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:07:28 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:07:28 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:07:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/40/edit" for 127.0.0.1 at 2013-07-02 08:07:49 -0700
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "40"]]
+Rendered words/_editing_form.html.haml (0.5ms)
+Rendered words/edit.html.haml within layouts/application (7.8ms)
+Rendered sessions/_login.html.haml (3.6ms)
+Completed 200 OK in 25ms (Views: 15.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:07:49 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:07:49 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:07:49 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:07:49 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-02 08:10:33 -0700
+  Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/home.html.haml within layouts/application (0.5ms)
+Rendered sessions/_login.html.haml (3.3ms)
+Completed 200 OK in 17ms (Views: 8.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:10:33 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:33 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:33 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-07-02 08:10:35 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/_editing_form.html.haml (0.5ms)
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (7.7ms)
+Rendered sessions/_login.html.haml (22.9ms)
+Completed 200 OK in 46ms (Views: 35.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:10:35 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:35 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:35 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-07-02 08:10:45 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mSZIf5+sWSPbh+7Js1kPs3AzvhEpnITP3/fI+ewhCRc=", "word"=>{"title"=>"第四", "in_chinese"=>"test"}, "commit"=>"添加"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", nil], ["attempt_count", 0], ["created_at", Tue, 02 Jul 2013 15:10:45 UTC +00:00], ["failed_count", 0], ["in_chinese", "test"], ["title", "第四"], ["updated_at", Tue, 02 Jul 2013 15:10:45 UTC +00:00], ["user_id", 1]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 99ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-07-02 08:10:45 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/_editing_form.html.haml (0.3ms)
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (34.9ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 52ms (Views: 43.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:10:45 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:45 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:45 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:45 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-02 08:10:47 -0700
+  Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/home.html.haml within layouts/application (0.4ms)
+Rendered sessions/_login.html.haml (4.0ms)
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:10:47 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:47 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-02 08:10:48 -0700
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY (failed_count - attempt_count) DESC, updated_at LIMIT 20
+Rendered words/ji.html.haml within layouts/application (10.8ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 50ms (Views: 41.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:10:48 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:48 -0700
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:48 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:10:48 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-02 08:11:15 -0700
+  Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/home.html.haml within layouts/application (0.4ms)
+Rendered sessions/_login.html.haml (2.9ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:11:15 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:15 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:15 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-07-02 08:11:16 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/_editing_form.html.haml (0.5ms)
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (8.3ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 57ms (Views: 16.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:11:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:16 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:16 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2013-07-02 08:11:24 -0700
+  Processing by WordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mSZIf5+sWSPbh+7Js1kPs3AzvhEpnITP3/fI+ewhCRc=", "word"=>{"title"=>"第五", "in_chinese"=>"test"}, "commit"=>"添加"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "words" ("add_date", "attempt_count", "created_at", "failed_count", "in_chinese", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["add_date", nil], ["attempt_count", 0], ["created_at", Tue, 02 Jul 2013 15:11:24 UTC +00:00], ["failed_count", 0], ["in_chinese", "test"], ["title", "第五"], ["updated_at", Tue, 02 Jul 2013 15:11:24 UTC +00:00], ["user_id", 1]]
+Redirected to http://localhost:3000/words
+Completed 302 Found in 66ms
+
+
+Started GET "/words" for 127.0.0.1 at 2013-07-02 08:11:24 -0700
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/_editing_form.html.haml (0.5ms)
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (9.5ms)
+Rendered sessions/_login.html.haml (0.4ms)
+Completed 200 OK in 26ms (Views: 16.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:11:24 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:25 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:25 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-02 08:11:28 -0700
+  Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/home.html.haml within layouts/application (1.1ms)
+Rendered sessions/_login.html.haml (3.9ms)
+Completed 200 OK in 18ms (Views: 9.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:11:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:28 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:28 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-02 08:11:29 -0700
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY (failed_count - attempt_count) DESC, updated_at LIMIT 20
+Rendered words/ji.html.haml within layouts/application (8.2ms)
+Rendered sessions/_login.html.haml (0.4ms)
+Completed 200 OK in 28ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:11:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:29 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:29 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:11:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-02 08:14:53 -0700
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY (failed_count / attempt_count) DESC, updated_at LIMIT 20
+Rendered words/ji.html.haml within layouts/application (8.6ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 48ms (Views: 13.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:14:53 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:14:53 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:14:53 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:14:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/42?recall=yes" for 127.0.0.1 at 2013-07-02 08:16:21 -0700
+  Processing by WordsController#show as HTML
+  Parameters: {"recall"=>"yes", "id"=>"42"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "42"]]
+Rendered words/show.html.haml within layouts/application (6.5ms)
+Rendered sessions/_login.html.haml (3.8ms)
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:16:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:16:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:16:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:16:21 -0700
+Served asset /application.js - 304 Not Modified (57ms)
+
+
+Started PUT "/ji?id=42&recall=no" for 127.0.0.1 at 2013-07-02 08:16:22 -0700
+  Processing by WordsController#ji as HTML
+  Parameters: {"authenticity_token"=>"mSZIf5+sWSPbh+7Js1kPs3AzvhEpnITP3/fI+ewhCRc=", "id"=>"42", "recall"=>"no"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "42"]]
+  [1m[36m (0.2ms)[0m  [1mUPDATE "words" SET "attempt_count" = 1, "failed_count" = 1, "updated_at" = '2013-07-02 15:16:22.898608' WHERE "words"."id" = 42[0m
+  [1m[35mWord Load (0.9ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY (failed_count / attempt_count) DESC, updated_at LIMIT 20
+Rendered words/ji.html.haml within layouts/application (8.9ms)
+Rendered sessions/_login.html.haml (0.5ms)
+Completed 200 OK in 137ms (Views: 16.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:16:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:16:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:16:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:16:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-02 08:16:33 -0700
+  Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/home.html.haml within layouts/application (0.5ms)
+Rendered sessions/_login.html.haml (3.2ms)
+Completed 200 OK in 40ms (Views: 34.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 08:16:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 08:16:34 -0700
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 08:16:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 08:16:34 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)

@@ -12,7 +12,7 @@ class WordsController < ApplicationController
   public
 
   def ji
-    @words = Word.where("user_id = ?", @current_user).order("updated_at DESC").limit(20)
+    @words = Word.where("user_id = ?", @current_user).order("(failed_count / attempt_count) DESC, updated_at").limit(20)
     if request.put? 
       @word = Word.find params[:id]
       @word.attempt_count += 1
@@ -21,7 +21,7 @@ class WordsController < ApplicationController
         @word.failed_count += 1
         flash.now[:notice] = "😞忘记“#{@word.title}”+1"
       elsif params[:recall] == 'yes'        
-        flash.now[:notice] = "记住“#{@word.title}”+1"
+        flash.now[:notice] = "😁记住“#{@word.title}”+1"
       else
         flash.now[:warning] = "Error on return recall value"
       end
