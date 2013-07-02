@@ -1,8 +1,13 @@
 %h2 单词编辑
 = form_tag word_path(@word), :method => :put do
   = render :partial => "editing_form"
+  = label :word, :attempt_count, '尝试次数'
+  = text_field :word, :attempt_count 
+  = label :word, :failed_count, '忘记次数'
+  = text_field :word, :failed_count
   = label :word, :add_date, '修改最近更新时间'
   = datetime_select :word, :updated_at, :use_month_numbers => true
   %div
-    = submit_tag 'update'
-= button_to 'Delete', word_path(@word), :method => :delete, :confirm => 'Are you sure?'
+    = submit_tag '更新单词'
+= button_to '删除单词', word_path(@word), :method => :delete, :confirm => 'Are you sure?'
+= button_to '取消编辑', words_path, :method => :get

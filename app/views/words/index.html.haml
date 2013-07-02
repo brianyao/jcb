@@ -11,12 +11,14 @@
     %tr
       %th 单词
       %th 中文释义
-      %th 编辑
+      %th 记:忘
       %th 创建日期
+      %th 编辑
   %tbody
     - @words.each do |word|
       %tr
         %td= word.title
         %td= word.in_chinese
-        %td= link_to "修改", edit_word_path(word)
+        %td= (word.attempt_count - word.failed_count).to_s + ':' + word.failed_count.to_s
         %td= word.created_at.to_date
+        %td= link_to "修改", edit_word_path(word)

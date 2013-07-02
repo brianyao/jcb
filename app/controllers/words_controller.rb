@@ -19,17 +19,17 @@ class WordsController < ApplicationController
       
       if params[:recall] == 'no'
         @word.failed_count += 1
-        flash[:notice] = "忘记“#{@word.title}”一次"
+        flash.now[:notice] = "😞忘记“#{@word.title}”+1"
       elsif params[:recall] == 'yes'        
-        flash[:notice] = "记住“#{@word.title}”一次"
+        flash.now[:notice] = "记住“#{@word.title}”+1"
       else
-        flash[:warning] = "Error on return recall value"
+        flash.now[:warning] = "Error on return recall value"
       end
 
       if @word.save
-        flash[:notice] += "，并成功更新记录！"
+        flash.now[:notice] += "，并成功更新记录！"
       else
-        flash[:notice] += "，但更新失败记录！"
+        flash.now[:notice] += "，而更新失败记录！"
       end
     end
   end
@@ -74,7 +74,7 @@ class WordsController < ApplicationController
   		flash[:notice] = "“#{@word.title}”成功更新！"
   		redirect_to words_path
   	else
-      lash[:error] = 'Error:: '
+      flash[:error] = 'Error:: '
       for error in @word.errors.full_messages
         flash[:error] += error
       end
