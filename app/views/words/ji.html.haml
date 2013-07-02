@@ -7,6 +7,7 @@
       %th :D
       %th :(
       %th 编辑
+      %th 记:忘
   %tbody
     - @words.each do |word|
       %tr
@@ -14,3 +15,4 @@
         %td= link_to "记得啊！", word_path(word, :recall => 'yes')
         %td= link_to "忘记了！", word_path(word, :recall => 'no')
         %td= link_to "修改", edit_word_path(word)
+        %td= (word.attempt_count - word.failed_count).to_s + ':' + word.failed_count.to_s

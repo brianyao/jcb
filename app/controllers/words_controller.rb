@@ -13,6 +13,25 @@ class WordsController < ApplicationController
 
   def ji
     @words = Word.where("user_id = ?", @current_user).order("updated_at DESC").limit(20)
+    if request.put? 
+      @word = Word.find params[:id]
+      @word.attempt_count += 1
+      
+      if params[:recall] == 'no'
+        @word.failed_count += 1
+        flash[:notice] = "忘记“#{@word.title}”一次"
+      elsif params[:recall] == 'yes'        
+        flash[:notice] = "记住“#{@word.title}”一次"
+      else
+        flash[:warning] = "Error on return recall value"
+      end
+
+      if @word.save
+        flash[:notice] += "，并成功更新记录！"
+      else
+        flash[:notice] += "，但更新失败记录！"
+      end
+    end
   end
 
   def index
@@ -30,6 +49,8 @@ class WordsController < ApplicationController
   def create
     @word = Word.new(params[:word])
     @word.user = @current_user
+    @word.attempt_count = 0
+    @word.failed_count = 0
     if @word.save
       # flash[:notice] = "成功将#{@word.title}加入记词本!"
       flash[:notice] = "Added '#{@word.title}'!"

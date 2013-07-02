@@ -2,9 +2,9 @@
 %h3#word= @word.title
 %h3#in_chinese= @word.in_chinese
 - if @recall == 'yes'
-  = button_to '真记得:D', '/ji'
-  = button_to '其实记不得:(', '/ji'
+  = button_to '真记得:D', "/ji?id=#{@word.id}&recall=yes", :method => :put
+  = button_to '其实记不得:(', "/ji?id=#{@word.id}&recall=no", :method => :put
 - elsif @recall == 'no'
-  = button_to '下次记得:p', '/ji'
+  = button_to '下次记得:p', "/ji?id=#{@word.id}&recall=no", :method => :put
 - else
   = button_to 'something is wrong...'
