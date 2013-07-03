@@ -49,20 +49,26 @@ class WordsController < ApplicationController
   end
 
   def create
-    @word = Word.new(params[:word])
-    @word.user = @current_user
-    @word.attempt_count = 0
-    @word.failed_count = 0
-    if @word.save
-      # flash[:notice] = "成功将#{@word.title}加入记词本!"
-      flash[:notice] = "Added '#{@word.title}'!"
+    existing_same_word = Word.where("user_id = ? AND title = ?", @current_user, params[:word][:title])[0]
+    if not existing_same_word.nil?
+      flash[:error] = "已经存在“#{existing_same_word[:title]}”，请直接编辑此单词，添加新的释义。"
+      redirect_to edit_word_path(existing_same_word)
     else
-      flash[:error] = 'Error:: '
-      for error in @word.errors.full_messages
-        flash[:error] += error
-      end       
+      @word = Word.new(params[:word])
+      @word.user = @current_user
+      @word.attempt_count = 0
+      @word.failed_count = 0
+      if @word.save
+        # flash[:notice] = "成功将#{@word.title}加入记词本!"
+        flash[:notice] = "Added '#{@word.title}'!"
+      else
+        flash[:error] = 'Error:: '
+        for error in @word.errors.full_messages
+          flash[:error] += error
+        end       
+      end
+      redirect_to words_path
     end
-    redirect_to words_path
   end
 
   def edit
