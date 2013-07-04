@@ -44957,3 +44957,531 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 08:50:28 -0700
 Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-04 09:08:33 -0700
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.4ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY (CASE WHEN attempt_count <> 0 THEN (failed_count / attempt_count) ELSE 0 END) DESC,
+ updated_at LIMIT 20
+Rendered words/ji.html.haml within layouts/application (40.7ms)
+Rendered sessions/_login.html.haml (2.3ms)
+Completed 200 OK in 161ms (Views: 108.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:08:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:34 -0700
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:34 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-07-04 09:08:40 -0700
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/_editing_form.html.haml (1.2ms)
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (18.0ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 32ms (Views: 22.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:08:40 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:40 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sentences" for 127.0.0.1 at 2013-07-04 09:08:42 -0700
+  Processing by SentencesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mSentence Load (0.2ms)[0m  SELECT "sentences".* FROM "sentences" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20
+Rendered sentences/index.html.haml within layouts/application (10.2ms)
+Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 48ms (Views: 15.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:08:43 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:43 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-04 09:08:55 -0700
+  Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/home.html.haml within layouts/application (1.8ms)
+Rendered sessions/_login.html.haml (3.5ms)
+Completed 200 OK in 20ms (Views: 9.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:08:55 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:55 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:08:55 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home/mail" for 127.0.0.1 at 2013-07-04 09:18:36 -0700
+
+ActionController::RoutingError (No route matches [GET] "/home/mail"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/home/mail" for 127.0.0.1 at 2013-07-04 09:19:33 -0700
+
+ActionController::RoutingError (No route matches [GET] "/home/mail"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:19:44 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/mail.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    1: = form_tag '\mail', :method => :get, :id => "receipients_form" do
+    2:   Include: 
+    3:     = 发给管理员
+    4:     = check_box_tag "recipients[admin]", 1, (true), :id => "recipients_admin"
+    5:     = 发给自己
+    6:     = check_box_tag "recipients[uself]", 1, (true), :id => "recipients_uself"
+  app/views/sessions/mail.html.haml:3
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:20:46 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/mail.html.haml within layouts/application (21.8ms)
+Completed 500 Internal Server Error in 67ms
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:21:19 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/mail.html.haml within layouts/application (21.2ms)
+Completed 500 Internal Server Error in 75ms
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:22:34 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/mail.html.haml within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 31ms
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:22:36 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/mail.html.haml within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 31ms
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:22:51 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/mail.html.haml within layouts/application (0.9ms)
+Rendered sessions/_login.html.haml (3.6ms)
+Completed 200 OK in 18ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:22:51 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:22:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:22:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:22:51 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:23:51 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/mail.html.haml within layouts/application (47.9ms)
+Completed 500 Internal Server Error in 64ms
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:25:00 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/mail.html.haml within layouts/application (2.8ms)
+Rendered sessions/_login.html.haml (4.9ms)
+Completed 200 OK in 23ms (Views: 13.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:25:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:25:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:25:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:25:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:27:48 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[35mUser Load (2.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/mail.html.haml within layouts/application (1.9ms)
+Rendered sessions/_login.html.haml (3.8ms)
+Completed 200 OK in 61ms (Views: 10.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:27:48 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:27:48 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:27:48 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:27:48 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:28:12 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/mail.html.haml within layouts/application (7.4ms)
+Rendered sessions/_login.html.haml (3.9ms)
+Completed 200 OK in 37ms (Views: 18.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:28:12 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:28:12 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:28:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:28:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:28:53 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/mail.html.haml within layouts/application (2.3ms)
+Rendered sessions/_login.html.haml (2.8ms)
+Completed 200 OK in 69ms (Views: 9.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:28:53 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:28:53 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:28:53 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:28:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:30:10 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/mail.html.haml within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 2)):
+    1: %h2 添加新单词
+    2: = form_tag words_path, :method => :get, :id => "receipients_form" do
+    3:   = label  "发给管理员"
+    4:   %div= check_box_tag "recipients[admin]", "发给管理员", (true), :id => "recipients_admin"
+    5:   %div= check_box_tag "recipients[uself]", "发给自己", (true), :id => "recipients_uself"
+    6:   = submit_tag 'mail!', :id => "mail_send"
+  app/views/sessions/mail.html.haml:3:in `block in _app_views_sessions_mail_html_haml__1061011278_91564380'
+  app/views/sessions/mail.html.haml:2:in `_app_views_sessions_mail_html_haml__1061011278_91564380'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:30:28 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/mail.html.haml within layouts/application (28.5ms)
+Rendered sessions/_login.html.haml (3.7ms)
+Completed 200 OK in 54ms (Views: 36.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:30:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:30:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:30:28 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:30:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:30:55 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/mail.html.haml within layouts/application (2.7ms)
+Rendered sessions/_login.html.haml (3.1ms)
+Completed 200 OK in 40ms (Views: 10.8ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:30:55 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:30:55 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:30:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:30:55 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:31:11 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/mail.html.haml within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 13ms
+
+
+Started GET "/home/mail" for 127.0.0.1 at 2013-07-04 09:31:28 -0700
+
+ActionController::RoutingError (No route matches [GET] "/home/mail"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/home/mail" for 127.0.0.1 at 2013-07-04 09:31:29 -0700
+
+ActionController::RoutingError (No route matches [GET] "/home/mail"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:31:37 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/mail.html.haml within layouts/application (1.6ms)
+Rendered sessions/_login.html.haml (2.7ms)
+Completed 200 OK in 19ms (Views: 11.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:31:37 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:31:37 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:31:37 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:31:37 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:31:56 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/mail.html.haml within layouts/application (2.1ms)
+Rendered sessions/_login.html.haml (3.3ms)
+Completed 200 OK in 18ms (Views: 9.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:31:56 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:31:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:31:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:31:56 -0700
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:32:06 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/mail.html.haml within layouts/application (2.6ms)
+Rendered sessions/_login.html.haml (3.2ms)
+Completed 200 OK in 17ms (Views: 9.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:32:06 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:32:06 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:32:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:32:06 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:32:46 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/mail.html.haml within layouts/application (2.6ms)
+Rendered sessions/_login.html.haml (3.4ms)
+Completed 200 OK in 26ms (Views: 11.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:32:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:32:46 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:32:46 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:32:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:33:06 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/mail.html.haml within layouts/application (2.4ms)
+Rendered sessions/_login.html.haml (3.2ms)
+Completed 200 OK in 19ms (Views: 10.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:33:06 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:33:06 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:33:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:33:06 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/mail" for 127.0.0.1 at 2013-07-04 09:33:47 -0700
+  Processing by SessionsController#mail as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/mail.html.haml within layouts/application (3.9ms)
+Rendered sessions/_login.html.haml (3.5ms)
+Completed 200 OK in 31ms (Views: 12.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 09:33:47 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 09:33:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 09:33:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:33:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)

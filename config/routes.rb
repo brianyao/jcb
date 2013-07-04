@@ -15,10 +15,11 @@ Jcb::Application.routes.draw do
   resources :words
   resources :sentences
   root :to => "sessions#home"
-  match "/home" => "sessions#home"
-  match "/admin" => "sessions#admin"
   match "/ji" => "words#ji"
 
+  match "/home" => "sessions#home"
+  match "/admin" => "sessions#admin"
+  match "/mail" => "sessions#mail"
   get "sessions/create"
   get "sessions/failure"
   #match "/login" => redirect("/auth/"), :as => :login

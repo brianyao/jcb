@@ -30,4 +30,7 @@ class SessionsController < ApplicationController
     @sentences = Sentence.all 
     @words = Word.all
   end
+
+  def mail
+  end
 end

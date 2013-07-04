@@ -1,0 +1,9 @@
+%h2 发
+= form_tag words_path, :method => :get, :id => "receipients_form" do
+  %div#to_admin
+    = check_box_tag "recipients[admin]", "发给管理员", (true), :id => "recipients_admin"
+    %label_tag  "发给管理员"
+  %div#to_uself
+    = check_box_tag "recipients[uself]", "发给自己", (true), :id => "recipients_uself"
+    %label_tag  "发给自己"
+  = submit_tag '发送', :id => "mail_send"
