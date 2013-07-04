@@ -8,10 +8,10 @@
   %tbody
     - @sentences.each do |sentence|
       %tr#original_tr
-        %td= sentence.title
+        %td#tr_sentence_title= sentence.title
         %td= ""
       %tr#translated_tr
-        %td= sentence.in_chinese
+        %td#tr_sentence_in_chinese= sentence.in_chinese
         %td= sentence.created_at.to_date
 
 %h2=link_to"最近编辑过的单词", words_path

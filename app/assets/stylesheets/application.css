@@ -72,6 +72,21 @@ table#words th, table#words td {
   padding: 4px;
   text-align: left;
 }
+table#sentences {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+table#sentences th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: yellowgreen;
+}
+table#sentences th, table#sentences td {
+  padding: 4px;
+  text-align: left;
+}
 #notice, #warning, #error {
   background: rosybrown;
   margin: 1em 0;
@@ -86,5 +101,14 @@ form label {
 #no_related_sentence{
   color: grey;
   font-style: italic;
+}
+#translated_tr{
+  border-bottom: 2px solid yellowgreen;
+
+}
+#tr_sentence_in_chinese{
+  font-style: italic;
+  color: grey;
+  text-indent: 7px;
 }
 }

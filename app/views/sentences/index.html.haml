@@ -14,14 +14,14 @@
     %tr
       %th 句子
       %th 创建日期
-      %th 编辑
+      %th 可用进行的操作
   %tbody
     - @sentences.each do |sentence|
       %tr#original_tr
-        %td= sentence.title
+        %td#tr_sentence_title= sentence.title
         %td= ""
-        %td= link_to "句子中的词", sentence_path(sentence)             
+        %td= link_to "编辑相关联的单词", sentence_path(sentence)             
       %tr#translated_tr
-        %td= sentence.in_chinese
+        %td#tr_sentence_in_chinese= sentence.in_chinese
         %td= sentence.created_at.to_date
-        %td= link_to "修改", edit_sentence_path(sentence)  
+        %td= link_to "编辑句子本身 ", edit_sentence_path(sentence)  
