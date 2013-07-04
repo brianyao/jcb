@@ -1,0 +1,27 @@
+-#  This file is app/views/sentences/index.html.haml
+%h2 添加新句子
+= form_tag sentences_path, :method => :post do
+  = label :sentence, :title, '句子'
+  = text_field :sentence, :title 
+  = label :sentence, :in_chinese, '中文翻译'
+  = text_field :sentence, :in_chinese 
+  %div= submit_tag '添加'
+
+%h2=link_to"最近编辑过的句子", sentences_path
+
+%table#sentences
+  %thead
+    %tr
+      %th 句子
+      %th 创建日期
+      %th 编辑
+  %tbody
+    - @sentences.each do |sentence|
+      %tr#original_tr
+        %td= sentence.title
+        %td= ""
+        %td= link_to "句子中的词", sentence_path(sentence)             
+      %tr#translated_tr
+        %td= sentence.in_chinese
+        %td= sentence.created_at.to_date
+        %td= link_to "修改", edit_sentence_path(sentence)  

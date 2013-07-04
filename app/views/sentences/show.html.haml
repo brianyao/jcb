@@ -1,0 +1,30 @@
+%h2 为此句子添加相关单词
+%h3#sentence= @sentence.title
+%h3#in_chinese= @sentence.in_chinese
+-#%h2 添加单词
+= form_tag words_path(:sentence_id => @sentence_id), :method => :post do
+  = label :word, :title, '单词'
+  = text_field :word, :title 
+  = label :word, :in_chinese, '中文释义'
+  = text_field :word, :in_chinese 
+  %div= submit_tag '添加'
+
+%h2 相关单词
+%table#words
+  %thead
+    %tr
+      %th 单词
+      %th 中文释义
+      %th 记:忘
+      %th 创建日期
+      %th 编辑
+  %tbody
+    - @words.each do |word|
+      %tr
+        %td= word.title
+        %td= word.in_chinese
+        %td= (word.attempt_count - word.failed_count).to_s + ':' + word.failed_count.to_s
+        %td= word.created_at.to_date
+        %td= link_to "修改", edit_word_path(word) 
+
+

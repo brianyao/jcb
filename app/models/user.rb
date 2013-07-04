@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :words
+  has_many :sentences
   include ActiveModel::MassAssignmentSecurity
   attr_protected :uid, :provider, :name
   def self.create_with_omniauth(auth)

@@ -1,6 +1,8 @@
 %h2 单词编辑
 = form_tag word_path(@word), :method => :put do
   = render :partial => "editing_form"
+  = label :word, :attempt_count, '来自句子'
+  = link_to @sentence.title, sentence_path(@sentence)
   = label :word, :attempt_count, '尝试次数'
   = text_field :word, :attempt_count 
   = label :word, :failed_count, '忘记次数'

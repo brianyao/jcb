@@ -37,7 +37,6 @@ class WordsController < ApplicationController
   end
 
   def index
-    # @words = Word.order("add_date DESC").limit(20)
     @words = Word.where("user_id = ?", @current_user).order("updated_at DESC").limit(20)
   end
 
@@ -53,21 +52,30 @@ class WordsController < ApplicationController
     @word.user = @current_user
     @word.attempt_count = 0
     @word.failed_count = 0
+    @sentence_id = params[:sentence_id]
+    if @sentence_id
+      @word.sentence_id = @sentence_id.to_i
+    end
     if @word.save
-      # flash[:notice] = "成功将#{@word.title}加入记词本!"
-      flash[:notice] = "Added '#{@word.title}'!"
+      flash[:notice] = "成功将#{@word.title}加入记词本!"
+      # flash[:notice] = "Added '#{@word.title}'!"
     else
       flash[:error] = 'Error:: '
       for error in @word.errors.full_messages
         flash[:error] += error
       end       
     end
-    redirect_to words_path
+    if @sentence_id 
+      redirect_to sentence_path(@sentence_id.to_i)
+    else
+      redirect_to words_path
+    end
   end
 
   def edit
     @word = Word.find params[:id]
     @word.updated_at = Time.now
+    @sentence = Sentence.find @word.sentence_id || ''
   end
 
   def update
