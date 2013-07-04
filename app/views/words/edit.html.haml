@@ -2,7 +2,10 @@
 = form_tag word_path(@word), :method => :put do
   = render :partial => "editing_form"
   = label :word, :attempt_count, '来自句子'
-  = link_to @sentence.title, sentence_path(@sentence)
+  - if @sentence
+    = link_to @sentence.title, sentence_path(@sentence)
+  - else
+    #no_related_sentence 没有相关联的句子
   = label :word, :attempt_count, '尝试次数'
   = text_field :word, :attempt_count 
   = label :word, :failed_count, '忘记次数'

@@ -45485,3 +45485,639 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 09:33:47 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateWords (20130608175942)
+Migrating to CreateUsers (20130626154457)
+Migrating to AddUserIdToWord (20130701091058)
+Migrating to CreateSentences (20130703214338)
+Migrating to AddSentenceIdToWord (20130704083731)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sentences")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("words")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_words_on_user_id')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-04 19:25:45 +0200
+  Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" IS NULL LIMIT 1[0m
+Rendered sessions/home.html.haml within layouts/application (2.3ms)
+Rendered sessions/_login.html.haml (2.3ms)
+Completed 200 OK in 245ms (Views: 104.4ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 19:25:46 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 19:25:46 +0200
+Served asset /jquery.js - 200 OK (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 19:25:46 +0200
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 19:25:46 +0200
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-07-04 19:25:54 +0200
+
+
+Started GET "/auth/facebook/callback?code=AQAiLeZ6dYhz6pvosbTXZp3UQm7-e1DzsvoihCJVUSo9J-oW8wTeqeP5Jb4gLAuA-c5ZnYQ7zlkjcXVclwlPsQan_n3QM2lpwV7ZGZwQXVUe1NRDt49-gvvdfymiSSPQOzqtULQE1E-B2sce06D2vtptAW7cojIwx7YTvCatcbGN6Z9kdDU012tz349onVxYgmg47WB5LJlngOVymQz78dGDFy3VsJOyraD0_5ZWjM2Qj8ca8LhvzFqziGitxlVVj5YzGKi7yEntrYnhGDalT2qj5PYgiIDA-faHpgIDAfBYliX7e3YedEImxQeNjtQKFCo" for 127.0.0.1 at 2013-07-04 19:26:27 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAiLeZ6dYhz6pvosbTXZp3UQm7-e1DzsvoihCJVUSo9J-oW8wTeqeP5Jb4gLAuA-c5ZnYQ7zlkjcXVclwlPsQan_n3QM2lpwV7ZGZwQXVUe1NRDt49-gvvdfymiSSPQOzqtULQE1E-B2sce06D2vtptAW7cojIwx7YTvCatcbGN6Z9kdDU012tz349onVxYgmg47WB5LJlngOVymQz78dGDFy3VsJOyraD0_5ZWjM2Qj8ca8LhvzFqziGitxlVVj5YzGKi7yEntrYnhGDalT2qj5PYgiIDA-faHpgIDAfBYliX7e3YedEImxQeNjtQKFCo", "provider"=>"facebook"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001499656133' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-04 19:26:28 +0200
+  Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/home.html.haml within layouts/application (0.9ms)
+Rendered sessions/_login.html.haml (4.6ms)
+Completed 200 OK in 76ms (Views: 15.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-04 19:26:35 +0200
+  Processing by WordsController#ji as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.5ms)[0m  [1mSELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY (CASE WHEN attempt_count <> 0 THEN (failed_count / attempt_count) ELSE 0 END) DESC,
+ updated_at LIMIT 20[0m
+Rendered words/ji.html.haml within layouts/application (59.1ms)
+Rendered sessions/_login.html.haml (0.5ms)
+Completed 200 OK in 97ms (Views: 65.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-04 19:26:37 +0200
+  Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/home.html.haml within layouts/application (1.4ms)
+Rendered sessions/_login.html.haml (4.8ms)
+Completed 200 OK in 34ms (Views: 14.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-07-04 19:26:38 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/_editing_form.html.haml (1.8ms)
+  [1m[35mWord Load (0.4ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (34.0ms)
+Rendered sessions/_login.html.haml (0.6ms)
+Completed 200 OK in 86ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-04 19:26:39 +0200
+  Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered sessions/home.html.haml within layouts/application (1.0ms)
+Rendered sessions/_login.html.haml (5.2ms)
+Completed 200 OK in 26ms (Views: 14.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/sentences" for 127.0.0.1 at 2013-07-04 19:26:40 +0200
+  Processing by SentencesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mSentence Load (0.2ms)[0m  [1mSELECT "sentences".* FROM "sentences" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20[0m
+Rendered sentences/index.html.haml within layouts/application (19.6ms)
+Rendered sessions/_login.html.haml (0.5ms)
+Completed 200 OK in 43ms (Views: 25.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-04 19:33:59 +0200
+  Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered sessions/home.html.haml within layouts/application (1.0ms)
+Rendered sessions/_login.html.haml (4.6ms)
+Completed 200 OK in 23ms (Views: 12.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2013-07-04 19:34:01 +0200
+  Processing by WordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+Rendered words/_editing_form.html.haml (0.4ms)
+  [1m[35mWord Load (0.4ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20
+Rendered words/index.html.haml within layouts/application (22.1ms)
+Rendered sessions/_login.html.haml (0.5ms)
+Completed 200 OK in 44ms (Views: 29.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/words/65/edit" for 127.0.0.1 at 2013-07-04 19:34:03 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "65"]]
+  [1m[36mSentence Load (0.2ms)[0m  [1mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1[0m  [["id", 6]]
+Rendered words/_editing_form.html.haml (1.2ms)
+Rendered words/edit.html.haml within layouts/application (19.4ms)
+Rendered sessions/_login.html.haml (4.1ms)
+Completed 200 OK in 89ms (Views: 29.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/words/7/" for 127.0.0.1 at 2013-07-04 19:39:20 +0200
+  Processing by WordsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "7"]]
+Rendered words/show.html.haml within layouts/application (43.7ms)
+Rendered sessions/_login.html.haml (4.2ms)
+Completed 200 OK in 66ms (Views: 53.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ji/words/7/" for 127.0.0.1 at 2013-07-04 19:41:40 +0200
+
+ActionController::RoutingError (No route matches [GET] "/ji/words/7"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/ji" for 127.0.0.1 at 2013-07-04 19:41:48 +0200
+  Processing by WordsController#ji as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.5ms)[0m  SELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY (CASE WHEN attempt_count <> 0 THEN (failed_count / attempt_count) ELSE 0 END) DESC,
+ updated_at LIMIT 20
+Rendered words/ji.html.haml within layouts/application (55.8ms)
+Rendered sessions/_login.html.haml (3.7ms)
+Completed 200 OK in 168ms (Views: 86.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/words/52/edit" for 127.0.0.1 at 2013-07-04 19:41:51 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "52"]]
+  [1m[36mSentence Load (0.1ms)[0m  [1mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1[0m  [["id", ""]]
+Completed 404 Not Found in 58ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sentence with id=):
+  app/controllers/words_controller.rb:78:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.7ms)
+
+
+Started GET "/words/1/edit" for 127.0.0.1 at 2013-07-04 19:42:45 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 404 Not Found in 11ms
+
+ActiveRecord::RecordNotFound (Couldn't find Word with id=1):
+  app/controllers/words_controller.rb:76:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.6ms)
+
+
+Started GET "/words/" for 127.0.0.1 at 2013-07-04 19:42:50 +0200
+  Processing by WordsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+Rendered words/_editing_form.html.haml (1.8ms)
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE (user_id = 1) ORDER BY updated_at DESC LIMIT 20[0m
+Rendered words/index.html.haml within layouts/application (27.4ms)
+Rendered sessions/_login.html.haml (0.5ms)
+Completed 200 OK in 53ms (Views: 33.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/words/65/edit" for 127.0.0.1 at 2013-07-04 19:42:52 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"65"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "65"]]
+  [1m[35mSentence Load (0.2ms)[0m  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", 6]]
+Rendered words/_editing_form.html.haml (0.6ms)
+Rendered words/edit.html.haml within layouts/application (19.9ms)
+Rendered sessions/_login.html.haml (4.2ms)
+Completed 200 OK in 87ms (Views: 30.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/words/64/edit" for 127.0.0.1 at 2013-07-04 19:42:56 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "64"]]
+  [1m[36mSentence Load (1.0ms)[0m  [1mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1[0m  [["id", 6]]
+Rendered words/_editing_form.html.haml (0.7ms)
+Rendered words/edit.html.haml within layouts/application (16.6ms)
+Rendered sessions/_login.html.haml (4.0ms)
+Completed 200 OK in 86ms (Views: 27.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/words/63/edit" for 127.0.0.1 at 2013-07-04 19:42:59 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"63"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "63"]]
+  [1m[35mSentence Load (1.0ms)[0m  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", 6]]
+Rendered words/_editing_form.html.haml (0.7ms)
+Rendered words/edit.html.haml within layouts/application (13.1ms)
+Rendered sessions/_login.html.haml (5.5ms)
+Completed 200 OK in 91ms (Views: 25.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/words/61/edit" for 127.0.0.1 at 2013-07-04 19:43:02 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.1ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "61"]]
+  [1m[36mSentence Load (0.1ms)[0m  [1mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1[0m  [["id", ""]]
+Completed 404 Not Found in 24ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sentence with id=):
+  app/controllers/words_controller.rb:78:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.3ms)
+
+
+Started GET "/words/61/edit" for 127.0.0.1 at 2013-07-04 19:43:08 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "61"]]
+  [1m[35mSentence Load (0.2ms)[0m  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", ""]]
+Completed 404 Not Found in 26ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sentence with id=):
+  app/controllers/words_controller.rb:78:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.2ms)
+
+
+Started GET "/words/61/edit" for 127.0.0.1 at 2013-07-04 19:43:13 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "61"]]
+  [1m[36mSentence Load (0.2ms)[0m  [1mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1[0m  [["id", ""]]
+Completed 404 Not Found in 67ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sentence with id=):
+  app/controllers/words_controller.rb:78:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.4ms)
+
+
+Started GET "/words/62/edit" for 127.0.0.1 at 2013-07-04 19:43:24 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"62"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.1ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "62"]]
+  [1m[35mSentence Load (0.2ms)[0m  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", ""]]
+Completed 404 Not Found in 27ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sentence with id=):
+  app/controllers/words_controller.rb:78:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.5ms)
+
+
+Started GET "/words/63/edit" for 127.0.0.1 at 2013-07-04 19:43:28 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"63"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "63"]]
+  [1m[36mSentence Load (0.2ms)[0m  [1mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1[0m  [["id", 6]]
+Rendered words/_editing_form.html.haml (0.7ms)
+Rendered words/edit.html.haml within layouts/application (12.5ms)
+Rendered sessions/_login.html.haml (4.1ms)
+Completed 200 OK in 51ms (Views: 24.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/words/64/edit" for 127.0.0.1 at 2013-07-04 19:43:35 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"64"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "64"]]
+  [1m[35mSentence Load (0.2ms)[0m  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", 6]]
+Rendered words/_editing_form.html.haml (0.8ms)
+Rendered words/edit.html.haml within layouts/application (15.8ms)
+Rendered sessions/_login.html.haml (5.5ms)
+Completed 200 OK in 65ms (Views: 29.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/words/58/edit" for 127.0.0.1 at 2013-07-04 19:43:42 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "58"]]
+  [1m[36mSentence Load (0.2ms)[0m  [1mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1[0m  [["id", ""]]
+Completed 404 Not Found in 28ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sentence with id=):
+  app/controllers/words_controller.rb:78:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.5ms)
+
+
+Started GET "/words/60/edit" for 127.0.0.1 at 2013-07-04 19:43:54 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"60"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.8ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mWord Load (1.1ms)[0m  SELECT "words".* FROM "words" 
+  [1m[36mWord Load (0.4ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", 60]]
+  [1m[35mWord Load (0.4ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "60"]]
+  [1m[36mCACHE (3.0ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m
+  [1m[35mSentence Load (0.3ms)[0m  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", 6]]
+Rendered words/_editing_form.html.haml (1.0ms)
+Rendered words/edit.html.haml within layouts/application (22.2ms)
+Rendered sessions/_login.html.haml (6.5ms)
+Completed 200 OK in 136041ms (Views: 37.7ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/words/59/edit" for 127.0.0.1 at 2013-07-04 19:46:16 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.4ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "59"]]
+  [1m[36mSentence Load (0.2ms)[0m  [1mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1[0m  [["id", ""]]
+Completed 404 Not Found in 4081ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sentence with id=):
+  app/controllers/words_controller.rb:79:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+
+
+Started GET "/words/60/edit" for 127.0.0.1 at 2013-07-04 19:49:51 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"60"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.9ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "60"]]
+  [1m[35mSentence Load (0.2ms)[0m  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", 6]]
+Rendered words/_editing_form.html.haml (1.0ms)
+Rendered words/edit.html.haml within layouts/application (65.0ms)
+Rendered sessions/_login.html.haml (5.6ms)
+Completed 200 OK in 4965ms (Views: 79.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 19:49:56 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/words/59/edit" for 127.0.0.1 at 2013-07-04 19:51:10 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.4ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "59"]]
+  [1m[36mSentence Load (0.2ms)[0m  [1mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1[0m  [["id", ""]]
+Completed 404 Not Found in 45085ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sentence with id=):
+  app/controllers/words_controller.rb:79:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started GET "/words/61/edit" for 127.0.0.1 at 2013-07-04 19:52:00 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.7ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "61"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1
+  [1m[36mSentence Load (0.3ms)[0m  [1mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1[0m  [["id", ""]]
+Completed 404 Not Found in 250713ms
+
+ActiveRecord::RecordNotFound (Couldn't find Sentence with id=):
+  app/controllers/words_controller.rb:79:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.1ms)
+
+
+Started GET "/words/61/edit" for 127.0.0.1 at 2013-07-04 19:56:18 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "61"]]
+Rendered words/_editing_form.html.haml (1.0ms)
+Rendered words/edit.html.haml within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 69ms
+
+ActionView::Template::Error (undefined method `title' for "":String):
+    2: = form_tag word_path(@word), :method => :put do
+    3:   = render :partial => "editing_form"
+    4:   = label :word, :attempt_count, '来自句子'
+    5:   = link_to @sentence.title, sentence_path(@sentence)
+    6:   = label :word, :attempt_count, '尝试次数'
+    7:   = text_field :word, :attempt_count 
+    8:   = label :word, :failed_count, '忘记次数'
+  app/views/words/edit.html.haml:5:in `block in _app_views_words_edit_html_haml__749243371__642595108'
+  app/views/words/edit.html.haml:2:in `_app_views_words_edit_html_haml__749243371__642595108'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.8ms)
+
+
+Started GET "/words/60/edit" for 127.0.0.1 at 2013-07-04 19:58:31 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"60"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1[0m  [["id", "60"]]
+  [1m[35mSentence Load (0.3ms)[0m  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", 6]]
+Rendered words/_editing_form.html.haml (0.8ms)
+Rendered words/edit.html.haml within layouts/application (20.3ms)
+Rendered sessions/_login.html.haml (7.2ms)
+Completed 200 OK in 108ms (Views: 35.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 19:58:31 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/words/61/edit" for 127.0.0.1 at 2013-07-04 19:58:40 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "61"]]
+Rendered words/_editing_form.html.haml (0.8ms)
+Rendered words/edit.html.haml within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 84ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"sentences", :id=>#<Sentence id: nil, title: nil, in_chinese: nil, created_at: nil, updated_at: nil, user_id: nil>}):
+    2: = form_tag word_path(@word), :method => :put do
+    3:   = render :partial => "editing_form"
+    4:   = label :word, :attempt_count, '来自句子'
+    5:   = link_to @sentence.title, sentence_path(@sentence)
+    6:   = label :word, :attempt_count, '尝试次数'
+    7:   = text_field :word, :attempt_count 
+    8:   = label :word, :failed_count, '忘记次数'
+  app/views/words/edit.html.haml:5:in `block in _app_views_words_edit_html_haml__749243371__642595108'
+  app/views/words/edit.html.haml:2:in `_app_views_words_edit_html_haml__749243371__642595108'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/words/62/edit" for 127.0.0.1 at 2013-07-04 20:02:17 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "62"]]
+Rendered words/_editing_form.html.haml (0.9ms)
+Rendered words/edit.html.haml within layouts/application (19.8ms)
+Rendered sessions/_login.html.haml (5.2ms)
+Completed 200 OK in 55ms (Views: 33.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 20:02:17 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/words/62/edit" for 127.0.0.1 at 2013-07-04 20:04:52 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "62"]]
+Rendered words/_editing_form.html.haml (1.0ms)
+Rendered words/edit.html.haml within layouts/application (64.6ms)
+Rendered sessions/_login.html.haml (21.4ms)
+Completed 200 OK in 195ms (Views: 115.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 20:04:53 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 20:04:53 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 20:04:53 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 20:04:53 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/62/edit" for 127.0.0.1 at 2013-07-04 20:04:59 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "62"]]
+Rendered words/_editing_form.html.haml (5.3ms)
+Rendered words/edit.html.haml within layouts/application (93.4ms)
+Rendered sessions/_login.html.haml (21.7ms)
+Completed 200 OK in 256ms (Views: 144.5ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 20:04:59 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 20:04:59 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 20:04:59 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 20:05:00 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/62/edit" for 127.0.0.1 at 2013-07-04 20:09:50 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "62"]]
+Rendered words/_editing_form.html.haml (1.1ms)
+Rendered words/edit.html.haml within layouts/application (21.5ms)
+Rendered sessions/_login.html.haml (5.5ms)
+Completed 200 OK in 60ms (Views: 36.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 20:09:51 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 20:09:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 20:09:51 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 20:09:51 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/62/edit" for 127.0.0.1 at 2013-07-04 20:11:35 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "62"]]
+Rendered words/_editing_form.html.haml (1.3ms)
+Rendered words/edit.html.haml within layouts/application (14.6ms)
+Compiled application.css  (0ms)  (pid 2754)
+Rendered sessions/_login.html.haml (6.5ms)
+Completed 200 OK in 103ms (Views: 34.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 20:11:36 +0200
+Served asset /application.css - 200 OK (27ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 20:11:36 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 20:11:36 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 20:11:36 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/words/62/edit" for 127.0.0.1 at 2013-07-04 20:12:00 +0200
+  Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '100001499656133' LIMIT 1[0m
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "62"]]
+Rendered words/_editing_form.html.haml (1.1ms)
+Rendered words/edit.html.haml within layouts/application (20.2ms)
+Compiled application.css  (0ms)  (pid 2754)
+Rendered sessions/_login.html.haml (6.3ms)
+Completed 200 OK in 111ms (Views: 46.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-04 20:12:01 +0200
+Served asset /application.css - 200 OK (28ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-04 20:12:01 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-04 20:12:01 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-04 20:12:01 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)

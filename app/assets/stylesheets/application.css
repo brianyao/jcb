@@ -83,3 +83,8 @@ form label {
   font-weight: bold;
   color: Black;
 }
+#no_related_sentence{
+  color: grey;
+  font-style: italic;
+}
+}

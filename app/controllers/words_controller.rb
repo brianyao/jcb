@@ -75,7 +75,11 @@ class WordsController < ApplicationController
   def edit
     @word = Word.find params[:id]
     @word.updated_at = Time.now
-    @sentence = Sentence.find @word.sentence_id || ''
+    if @word.sentence_id
+      @sentence = Sentence.find @word.sentence_id
+    else
+      @sentence = nil
+    end
   end
 
   def update
