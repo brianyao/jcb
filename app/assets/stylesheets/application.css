@@ -9,6 +9,27 @@ html, body {
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 11pt;
 }
+#log_nav {
+  position: absolute;
+  right: 18px;
+}
+#log_nav li {
+  float: left;
+  width: 175px;
+  height: 70px;
+  position: relative;
+}
+ol, ul {
+  list-style: none outside none;
+}
+#welcome_title
+{
+  text-align:left;
+}
+#welcom_message, #logout_link
+{
+  display:inline;
+}
 div#main {
   margin: 0;
   padding: 0 20px 20px;
