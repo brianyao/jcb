@@ -16,6 +16,7 @@ Jcb::Application.routes.draw do
   resources :sentences
   root :to => "sessions#home"
   match "/home" => "sessions#home"
+  match "/admin" => "sessions#admin"
   match "/ji" => "words#ji"
 
   get "sessions/create"

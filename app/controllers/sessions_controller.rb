@@ -25,4 +25,9 @@ class SessionsController < ApplicationController
     flash[:notice] = 'Logged out successfully.'
     redirect_to '/'
   end
+
+  def admin
+    @sentences = Sentence.all 
+    @words = Word.all
+  end
 end
