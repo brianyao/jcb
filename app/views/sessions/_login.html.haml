@@ -1,8 +1,9 @@
 #login
   - if @current_user
-    %div#welcome_title
-      %div#welcom_message Welcome, #{@current_user.name}!
-      %div#logout_link= link_to 'Log Out', logout_path
+    %div#logedin_nav
+      %li.welcom_message Welcome, #{@current_user.name}!
+      %li.logout_link= link_to 'Log Out', logout_path
+      %li.daily_mail= link_to '交作业', '/mail'
   - else
     %ol#log_nav
       %li.login= link_to '使用腾讯QQ登陆', "/auth/qq_connect"

@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   private
  
   def require_login
-  	@current_user ||= User.find_by_uid(session[:uid])
+    @current_user ||= User.find_by_uid(session[:uid])
     unless @current_user
       flash[:error] = "请先登录从而使用记词本功能。"
       redirect_to '/' # halts request cycle
