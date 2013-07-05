@@ -123,3 +123,11 @@ textarea {
 width: 700px; 
 height: 40px; 
 }
+.text_warning{
+  color: dodgerblue;
+  font-style: italic;
+  font-size: 80%;
+}
+.text_warning:hover{
+  color: maroon;
+}

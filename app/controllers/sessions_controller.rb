@@ -56,17 +56,18 @@ class SessionsController < ApplicationController
     @gen =Gen.new
     if not params[:gen]      
       @gen.file_name = "宿題_" + Time.now.strftime("%Y年%m月%d日") + '_' + @current_user.name
-      @gen.from = Time.now.ago(18.hours)
-      @gen.to = Time.now
+      @gen.from = Time.now.ago(12.hours).since(60)
+      @gen.to = Time.now.since(60)
     else
       @gen.file_name = params[:gen][:file_name]
-      @gen.from = @gen.parse_datetime_params(params[:gen], :from, Time.now.zone)
-      @gen.to = @gen.parse_datetime_params(params[:gen], :to, Time.now.zone)
+      @gen.from = @gen.parse_datetime_params(params[:gen], :from, :utc).change(:offset => DateTime.now.zone)
+      @gen.to = @gen.parse_datetime_params(params[:gen], :to, :utc).change(:offset => DateTime.now.zone)
     end
     if params[:commit] == "察看结果"
-      @sentences = Sentence.where(:created_at => @gen.from..@gen.to)
+      @sentences = Sentence.where(["created_at >= ? AND created_at <= ?", @gen.from, @gen.to])
+      # debugger
     elsif params[:commit] == "生成文件"
-      @sentences = Sentence.where(:created_at => @gen.from..@gen.to)
+      @sentences = Sentence.where(["created_at >= ? AND created_at <= ?", @gen.from, @gen.to])
         csv_string = CSV.generate do |csv| 
           # header row 
           csv << [nil, nil, "句子", nil, "单词"]

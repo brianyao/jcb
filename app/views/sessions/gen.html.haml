@@ -21,7 +21,7 @@
     %tbody
       - @sentences.each do |sentence|
         %tr#original_tr
-          %td#tr_sentence_title= sentence.title
+          %td#tr_sentence_title=link_to sentence.title, sentence_path(sentence)
           %td= ""
         %tr#gen_translated_tr
           %td#tr_sentence_in_chinese= sentence.in_chinese
@@ -30,3 +30,5 @@
           - words_str=''; for word in sentence.words; words_str+=(word.title+':'+word.in_chinese+';    ');end
           %td= words_str 
           %td= ""
+
+.text_warning *生成文件时请去除句子或词语中的英文逗号，否则生成的csv文件无法阅读。中文或日本的逗号不影响。
