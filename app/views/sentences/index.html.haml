@@ -1,10 +1,7 @@
 -#  This file is app/views/sentences/index.html.haml
 %h2 添加新句子
-= form_tag sentences_path, :method => :post do
-  = label :sentence, :title, '句子'
-  = text_field :sentence, :title 
-  = label :sentence, :in_chinese, '中文翻译'
-  = text_field :sentence, :in_chinese 
+= form_tag sentences_path, :method => :post, :id => "sentences_form" do
+  = render :partial => 'editing_form'
   %div= submit_tag '添加'
 
 %h2=link_to"最近编辑过的句子", sentences_path

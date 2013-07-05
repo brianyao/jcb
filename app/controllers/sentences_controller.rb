@@ -57,7 +57,7 @@ class SentencesController < ApplicationController
   def destroy
     @sentence = Sentence.find(params[:id])
     @sentence.destroy
-    flash[:notice] = "Sentence '#{@sentence.title}' deleted."
+    flash[:notice] = "成功删除句子“#{@sentence.title}”！"
     redirect_to sentences_path
   end
 end

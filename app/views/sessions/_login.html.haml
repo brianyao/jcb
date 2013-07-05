@@ -1,11 +1,15 @@
 #login
   - if @current_user
-    %div#logedin_nav
-      %li.welcom_message Welcome, #{@current_user.name}!
-      %li.logout_link= link_to 'Log Out', logout_path
-      %li.daily_mail= link_to '交作业', '/mail'
+    %ol.nav#func_nav
+      %li#user_name=    link_to  @current_user.name, '/'
+      %li#logout_link=  link_to '登出', logout_path
+      %li#ji=           link_to '记单词!', "/ji"
+      %li#words=        link_to '我的单词', words_path
+      %li#sentences=    link_to '我的句子', sentences_path
+      %li#gen=          link_to '交作业', '/gen'
   - else
-    %ol#log_nav
+    %ol.nav#log_nav
       %li.login= link_to '使用腾讯QQ登陆', "/auth/qq_connect"
       %li.login= link_to '使用新浪微博登陆', "/auth/weibo"
       %li.login= link_to 'login with Facebook account', "/auth/facebook"
+    

@@ -1,0 +1,32 @@
+%h2 生成如下时间短添加的句子和单词列表
+= form_tag 'gen', :method => :get do
+  %div#gen_from
+    %label_tag  从
+    = datetime_select :gen, :from, :use_month_numbers => true 
+  %div#gen_to
+    %label_tag  至
+    = datetime_select :gen, :to, :use_month_numbers => true
+  %div#gen_file_name
+    %label_tag 文件名:
+    = text_field :gen, :file_name
+  %div= submit_tag '察看结果'
+  %div= submit_tag '生成文件'	
+
+- if @sentences
+  %table#sentences
+    %thead
+      %tr
+        %th 句子和单词
+        %th 创建日期
+    %tbody
+      - @sentences.each do |sentence|
+        %tr#original_tr
+          %td#tr_sentence_title= sentence.title
+          %td= ""
+        %tr#gen_translated_tr
+          %td#tr_sentence_in_chinese= sentence.in_chinese
+          %td= sentence.created_at.to_date
+        %tr#translated_tr
+          - words_str=''; for word in sentence.words; words_str+=(word.title+':'+word.in_chinese+';    ');end
+          %td= words_str 
+          %td= ""

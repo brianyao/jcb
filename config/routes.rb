@@ -19,6 +19,7 @@ Jcb::Application.routes.draw do
 
   match "/home" => "sessions#home"
   match "/admin" => "sessions#admin"
+  match "/gen" => "sessions#gen"
   match "/mail" => "sessions#mail"
   get "sessions/create"
   get "sessions/failure"

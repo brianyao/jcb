@@ -9,18 +9,22 @@ html, body {
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 11pt;
 }
-#log_nav, #logedin_nav {
-  position: absolute;
-  right: 18px;
+#main {
+  padding: 0px 30px;
 }
-#log_nav li, #logedin_nav li {
+.nav {
+  position: absolute;
+  right: 0px;
+}
+.nav li {
   float: left;
-  width: 175px;
+  width: 155px;
   height: 70px;
   position: relative;
 }
 ol, ul {
   list-style: none outside none;
+}
 }
 div#main {
   margin: 0;
@@ -28,9 +32,12 @@ div#main {
 }
 a {
   background: transparent;
-  color: #000033;
-  text-decoration: underline;
+  color: #069;
+  text-decoration: none;
   font-weight: bold;
+}
+a:hover {
+  color: #690;
 }
 h1 {
   color: maroon;
@@ -42,18 +49,27 @@ h1 {
 }
 h1.title, h1.title a {
   margin: 0 0 1em;
-  padding: 10px;
+  padding: 45px 10px 10px;
   background-color: yellowgreen;
   color: dodgerblue;
   border-bottom: 4px solid greenyellow;
   font-size: 1.5em;
   font-style: normal;
 }
+h1.title a:hover {
+  color: #690;
+}
+h2 {
+  padding: 20px 0px 0px;
+}
+h3 {
+  padding: 0px 19px;
+}
 table#words {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid yellowgreen;
 }
 table#words th {
   border: 2px solid white;
@@ -68,7 +84,7 @@ table#sentences {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid yellowgreen;
 }
 table#sentences th {
   border: 2px solid white;
@@ -78,6 +94,19 @@ table#sentences th {
 table#sentences th, table#sentences td {
   padding: 4px;
   text-align: left;
+}
+#no_related_sentence{
+  color: grey;
+  font-style: italic;
+}
+#translated_tr{
+  border-bottom: 1px solid yellowgreen;
+
+}
+#tr_sentence_in_chinese{
+  font-style: italic;
+  color: grey;
+  text-indent: 7px;
 }
 #notice, #warning, #error {
   background: rosybrown;
@@ -90,17 +119,7 @@ form label {
   font-weight: bold;
   color: Black;
 }
-#no_related_sentence{
-  color: grey;
-  font-style: italic;
-}
-#translated_tr{
-  border-bottom: 2px solid yellowgreen;
-
-}
-#tr_sentence_in_chinese{
-  font-style: italic;
-  color: grey;
-  text-indent: 7px;
-}
+textarea { 
+width: 700px; 
+height: 40px; 
 }
