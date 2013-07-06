@@ -63,7 +63,7 @@ class SessionsController < ApplicationController
       @gen.from = @gen.parse_datetime_params(params[:gen], :from, :utc).change(:offset => DateTime.now.zone)
       @gen.to = @gen.parse_datetime_params(params[:gen], :to, :utc).change(:offset => DateTime.now.zone)
     end
-    if params[:commit] == "察看结果"
+    if params[:commit] == "查看结果"
       @sentences = Sentence.where(["created_at >= ? AND created_at <= ?", @gen.from, @gen.to])
       # debugger
     elsif params[:commit] == "生成文件"

@@ -1,15 +1,16 @@
-#login
+%div#header
+  #header_logo=link_to image_tag('header_logo.png'), '/' 
   - if @current_user
-    %ol.nav#func_nav
-      %li#user_name=    link_to  @current_user.name, '/'
-      %li#logout_link=  link_to '登出', logout_path
-      %li#ji=           link_to '记单词!', "/ji"
-      %li#words=        link_to '我的单词', words_path
-      %li#sentences=    link_to '我的句子', sentences_path
-      %li#gen=          link_to '交作业', '/gen'
+    %ul.nav#func_nav
+      %li.func_nav_item= link_to  @current_user.name, '/'
+      %li.func_nav_item= link_to '登出', logout_path
+      %li.func_nav_item= link_to '记单词!', "/ji"
+      %li.func_nav_item= link_to '我的单词', words_path
+      %li.func_nav_item= link_to '我的句子', sentences_path
+      %li.func_nav_item= link_to '交作业', '/gen'
   - else
-    %ol.nav#log_nav
-      %li.login= link_to '使用腾讯QQ登陆', "/auth/qq_connect"
-      %li.login= link_to '使用新浪微博登陆', "/auth/weibo"
-      %li.login= link_to 'login with Facebook account', "/auth/facebook"
+    %ul.nav#login_nav
+      %li.login_nav_item= link_to '使用腾讯QQ登陆', "/auth/qq_connect"
+      %li.login_nav_item= link_to '使用新浪微博登陆', "/auth/weibo"
+      %li.login_nav_item= link_to 'Login w/ Facebook', "/auth/facebook"
     
