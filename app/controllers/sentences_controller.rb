@@ -28,13 +28,18 @@ class SentencesController < ApplicationController
     @sentence.user = @current_user
     if @sentence.save
       flash[:notice] = "成功将句子“#{@sentence.title}”加入记词本!"
+      if params[:commit] == "添加句子"
+        redirect_to sentences_path
+      elsif params[:commit] == "添加并连接单词"
+        redirect_to sentence_path(@sentence)
+      end
     else
       flash[:error] = 'Error:: '
       for error in @sentence.errors.full_messages
         flash[:error] += error
-      end       
+      end
+      redirect_to sentences_path       
     end
-    redirect_to sentences_path
   end
 
   def edit

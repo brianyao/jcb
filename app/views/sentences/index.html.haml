@@ -2,7 +2,8 @@
 %h2 添加新句子
 = form_tag sentences_path, :method => :post, :id => "sentences_form" do
   = render :partial => 'sentence_editing_form'
-  %div= submit_tag '添加'
+  %div= submit_tag '添加句子'
+  %div= submit_tag '添加并连接单词'
 
 %h2=link_to"最近编辑过的句子", sentences_path
 = render :partial => 'sentences_list_without_related_words'
