@@ -16,16 +16,18 @@ class SentencesController < ApplicationController
   end
 
   def show
-    @sentence_id = params[:id]
-    @sentence = Sentence.find @sentence_id
-    @words = Word.where("sentence_id = ?", @sentence).order("updated_at DESC")
+    unless self.check_user(Sentence, params[:id]) == 'stop'
+      @sentence_id = params[:id]
+      @sentence = Sentence.find @sentence_id
+      @words = Word.where("sentence_id = ?", @sentence).order("updated_at DESC")
+    end
   end
 
   def create
     @sentence = Sentence.new(params[:sentence])
     @sentence.user = @current_user
     if @sentence.save
-      flash[:notice] = "成功将#{@sentence.title}加入记词本!"
+      flash[:notice] = "成功将句子“#{@sentence.title}”加入记词本!"
     else
       flash[:error] = 'Error:: '
       for error in @sentence.errors.full_messages
@@ -36,28 +38,35 @@ class SentencesController < ApplicationController
   end
 
   def edit
-    @sentence = Sentence.find params[:id]
-    @sentence.updated_at = Time.now
+    unless self.check_user(Sentence, params[:id]) == 'stop'
+      @sentence = Sentence.find params[:id]
+      @sentence.updated_at = Time.now
+    end
   end
 
   def update
-    @sentence = Sentence.find params[:id]
-    if @sentence.update_attributes params[:sentence]
-      flash[:notice] = "“#{@sentence.title}”成功更新！"
-      redirect_to sentences_path
-    else
-      flash[:error] = 'Error:: '
-      for error in @sentence.errors.full_messages
-        flash[:error] += error
+    unless self.check_user(Sentence, params[:id]) == 'stop'
+      @sentence = Sentence.find params[:id]
+      if @sentence.update_attributes params[:sentence]
+        flash[:notice] = "“#{@sentence.title}”成功更新！"
+        redirect_to sentences_path
+      else
+        flash[:error] = 'Error:: '
+        for error in @sentence.errors.full_messages
+          flash[:error] += error
+        end
+        redirect_to edit_sentence_path(@sentence)
       end
-      redirect_to edit_sentence_path(@sentence)
     end
   end
 
   def destroy
-    @sentence = Sentence.find(params[:id])
-    @sentence.destroy
-    flash[:notice] = "成功删除句子“#{@sentence.title}”！"
-    redirect_to sentences_path
+    unless self.check_user(Sentence, params[:id]) == 'stop'
+      @sentence = Sentence.find(params[:id])
+      @sentence.destroy
+      flash[:notice] = "成功删除句子“#{@sentence.title}”！"
+      redirect_to sentences_path
+    end
   end
+
 end

@@ -20,4 +20,17 @@ class ApplicationController < ActionController::Base
       redirect_to '/' # halts request cycle
     end
   end
+
+  public
+
+  def check_user(model, entry_id)
+    if model.find(entry_id).user_id != @current_user.id
+      flash[:error] = "The resource that you requested does not belong to you!"
+      redirect_to '/'
+      return 'stop'
+    else
+      return 'pass'
+    end
+  end
+
 end

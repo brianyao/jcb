@@ -40,13 +40,6 @@ class WordsController < ApplicationController
     @words = Word.where("user_id = ?", @current_user).order("updated_at DESC").limit(20)
   end
 
-  def show
-    id = params[:id] # retrieve movie ID from URI route
-    @word = Word.find(id) # look up movie by unique ID
-    @recall = params[:recall]
-    # will render app/views/movies/show.<extension> by default
-  end
-
   def create
     @word = Word.new(params[:word])
     @word.user = @current_user
@@ -72,34 +65,50 @@ class WordsController < ApplicationController
     end
   end
 
+  def show
+    unless self.check_user(Word, params[:id]) == 'stop'
+      id = params[:id] # retrieve movie ID from URI route
+      @word = Word.find(id) # look up movie by unique ID
+      @recall = params[:recall]
+      # will render app/views/movies/show.<extension> by default
+    end
+  end
+
   def edit
-    @word = Word.find params[:id]
-    @word.updated_at = Time.now
-    if @word.sentence_id
-      @sentence = Sentence.find @word.sentence_id
-    else
-      @sentence = nil
+    unless self.check_user(Word, params[:id]) == 'stop'
+      @word = Word.find params[:id]
+      @word.updated_at = Time.now
+      if @word.sentence_id
+        @sentence = Sentence.find @word.sentence_id
+      else
+        @sentence = nil
+      end
     end
   end
 
   def update
-  	@word = Word.find params[:id]
-  	if @word.update_attributes params[:word]
-  		flash[:notice] = "“#{@word.title}”成功更新！"
-  		redirect_to words_path
-  	else
-      flash[:error] = 'Error:: '
-      for error in @word.errors.full_messages
-        flash[:error] += error
+    unless self.check_user(Word, params[:id]) == 'stop'
+      @word = Word.find params[:id]
+      if @word.update_attributes params[:word]
+        flash[:notice] = "“#{@word.title}”成功更新！"
+        redirect_to words_path
+      else
+        flash[:error] = 'Error:: '
+        for error in @word.errors.full_messages
+          flash[:error] += error
+        end
+        redirect_to edit_word_path(@word)
       end
-  		redirect_to edit_word_path(@word)
-  	end
+    end
   end
 
   def destroy
-    @word = Word.find(params[:id])
-    @word.destroy
-    flash[:notice] = "Word '#{@word.title}' deleted."
-    redirect_to words_path
+    unless self.check_user(Word, params[:id]) == 'stop'
+      @word = Word.find(params[:id])
+      @word.destroy
+      flash[:notice] = "成功删除单词“#{@word.title}”！"
+      redirect_to words_path
+    end
   end
+
 end

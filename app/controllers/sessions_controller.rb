@@ -64,10 +64,10 @@ class SessionsController < ApplicationController
       @gen.to = @gen.parse_datetime_params(params[:gen], :to, :utc).change(:offset => DateTime.now.zone)
     end
     if params[:commit] == "查看结果"
-      @sentences = Sentence.where(["created_at >= ? AND created_at <= ?", @gen.from, @gen.to])
+      @sentences = Sentence.where(["user_id = ? AND created_at >= ? AND created_at <= ?", @current_user, @gen.from, @gen.to])
       # debugger
     elsif params[:commit] == "生成文件"
-      @sentences = Sentence.where(["created_at >= ? AND created_at <= ?", @gen.from, @gen.to])
+      @sentences = Sentence.where(["user_id = ? AND created_at >= ? AND created_at <= ?", @current_user, @gen.from, @gen.to])
         csv_string = CSV.generate do |csv| 
           # header row 
           csv << [nil, nil, "句子", nil, "单词"]
