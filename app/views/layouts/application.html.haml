@@ -2,7 +2,8 @@
 %html
   %head
     <meta property="qc:admins" content="150067131312605273510063757" />
-    <meta property="wb:webmaster" content="8a72fadd492d56ea" />  
+    <meta property="wb:webmaster" content="8a72fadd492d56ea" /> 
+    = favicon_link_tag 'favicon.ico'
     %title JiCiBen
     = stylesheet_link_tag 'alternative'
     = javascript_include_tag 'application'
@@ -10,7 +11,7 @@
   
   %body
     = render :partial=>'sessions/login'
-    %h1.title= link_to "记词本 JiCiBen.com", '/home'
+    -#%h1.title= link_to "记词本 JiCiBen.com", '/home'
     #main
       - if flash[:error]
         #error.message= flash[:error]

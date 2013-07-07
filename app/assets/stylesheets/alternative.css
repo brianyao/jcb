@@ -2,12 +2,12 @@
 /* Add these lines to app/assets/stylesheets/application.css */
 a {
   background: transparent;
-  color: #007E5F;
+  color: #690;
   text-decoration: none;
   font-weight: bold;
 }
 a:hover {
-  color: #0AADD8;
+  color: orange;
 }
 html, body {
   width: auto;
@@ -24,6 +24,7 @@ html, body {
 }
 #header {
   background: #666;
+  background-image: url('gradient-dark-nav.png');
   height: 30px;
   font-size: 0.8em;
   font-weight: bold;
@@ -41,44 +42,45 @@ html, body {
   height: 17px;
 }
 ul.nav{
-  margin: 0px 0px;
-  list-style: none inside;
+  margin: 0px 0px 0px 170px;
+  background: transparent;
+  list-style: none inside none;
   color: fuchsia;
-  border: 1px solid red;
+  border: 0px solid red;
   position: absolute;
-  width: 100%;
+  width: auto;
   display: block;
-  list-style-type: disc;
+  padding: 0px;
+}
+.func_nav_item{
+  width: 100px;
+}
+.login_nav_item{
+  width: 170px;
 }
 li {
-  list-style: none inside;
+  width: 100px;
   display: list-item;
   float: left;
-  border-right-width: 10px;
+  border-width: 0px 1px 0px 0px;
   border-color: #4e4e4e;
   border-style: solid;
   margin: 0px;
   height: 30px;
-  margin: 0;
   padding: 0;
-  border: 0;
   outline: 0;
   font-size: 100%;
-  background: transparent;
-  margin-left: 05px;
+  text-align: center;
   line-height: 250%;
 }
 li:first-child{
-  margin: 0px 0px 0px 100px;
   border-left-width: 1px;
 }
 .login_nav_item a, .func_nav_item a{
   color: white;
-  margin: 10px 20px;
-  line-height: 200%;
 }
 .login_nav_item a:hover, .func_nav_item a:hover{
-  color: #829C5B;
+  color: yellowgreen;
 }
 div#main {
   margin: 0;
@@ -155,7 +157,7 @@ table#sentences th, table#sentences td {
   text-indent: 7px;
 }
 #notice, #warning, #error {
-  background: rosybrown;
+  background: dodgerblue;
   margin: 1em 0;
   padding: 4px;
 }
