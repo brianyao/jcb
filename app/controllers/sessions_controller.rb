@@ -88,7 +88,7 @@ class SessionsController < ApplicationController
       # send it to the browser
       send_data csv_string, 
                 :type => 'text/csv; charset=iso-8859-1; header=present', 
-                :disposition => "attachment; filename=#{@gen.file_name}.csv"             
+                :disposition => "attachment; filename=#{@gen.file_name}.csv.txt"             
     end
   end
 
