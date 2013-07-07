@@ -1,6 +1,6 @@
 %h2 句子编辑
 = form_tag sentence_path(@sentence), :method => :put, :id => "sentences_form" do
-  = render :partial => 'editing_form'
+  = render :partial => 'sentence_editing_form'
   = label :sentence, :add_date, '修改最近更新时间'
   = datetime_select :sentence, :updated_at, :use_month_numbers => true
   %div

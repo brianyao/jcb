@@ -1,6 +1,6 @@
 %h2 单词
-%h3#word= @word.title
-%h3#in_chinese= @word.in_chinese
+%h3= link_to @word.title, edit_word_path(@word)
+%h3.in_chinese= @word.in_chinese
 - if @recall == 'yes'
   = button_to '真记得:D', "/ji?id=#{@word.id}&recall=yes", :method => :put
   = button_to '其实记不得:(', "/ji?id=#{@word.id}&recall=no", :method => :put

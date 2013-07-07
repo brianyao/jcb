@@ -1,18 +1,17 @@
-%h2 记！
-%hr
+%h2 记单词！
+%h3 回忆单词的中文意思，点击记得或记不得。
+%h3 点击单词进行编辑。
 %table#words
   %thead
     %tr
-      %th 单词
-      %th :D
-      %th :(
-      %th 编辑
+      %th 单词列表（从上到下由难到易）
+      %th 记得此单词
+      %th 忘了此单词
       %th 记:忘
   %tbody
     - @words.each do |word|
       %tr
-        %td= word.title
-        %td= link_to "记得啊！", word_path(word, :recall => 'yes')
-        %td= link_to "忘记了！", word_path(word, :recall => 'no')
-        %td= link_to "修改", edit_word_path(word)
+        %td= link_to word.title, edit_word_path(word)
+        %td= link_to "✔记得", word_path(word, :recall => 'yes')
+        %td= link_to "✘忘记", word_path(word, :recall => 'no')
         %td= (word.attempt_count - word.failed_count).to_s + ':' + word.failed_count.to_s

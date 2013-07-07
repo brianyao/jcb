@@ -9,26 +9,30 @@
   %div#gen_file_name
     %label_tag 文件名:
     = text_field :gen, :file_name
-  %div= submit_tag '察看结果'
+  %div= submit_tag '查看结果'
   %div= submit_tag '生成文件'	
 
 - if @sentences
   %table#sentences
     %thead
       %tr
-        %th 句子和单词
-        %th 创建日期
+        %th 句子及相关单词
+        %th 
     %tbody
       - @sentences.each do |sentence|
         %tr#original_tr
-          %td#tr_sentence_title=link_to sentence.title, sentence_path(sentence)
-          %td= ""
-        %tr#gen_translated_tr
-          %td#tr_sentence_in_chinese= sentence.in_chinese
-          %td= sentence.created_at.to_date
+          %td#tr_sentence_title= link_to sentence.title, edit_sentence_path(sentence)
+          %td= link_to "相关单词", edit_sentence_path(sentence)  
         %tr#translated_tr
-          - words_str=''; for word in sentence.words; words_str+=(word.title+':'+word.in_chinese+';    ');end
-          %td= words_str 
+          %td.in_chinese#tr_sentence_in_chinese= sentence.in_chinese
+          %td= sentence.created_at.to_date
+        %tr#related_words_tr
+          %td#tr_related_words
+            - for word in sentence.words
+              = link_to word.title, edit_word_path(word)
+              = ':'
+              %span.in_chinese= word.in_chinese
+              = '；'
           %td= ""
 
 .text_warning *生成文件时请去除句子或词语中的英文逗号，否则生成的csv文件无法阅读。中文或日本的逗号不影响。

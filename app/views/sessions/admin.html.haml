@@ -1,34 +1,25 @@
 %h2=link_to"句子", sentences_path
-
 %table#sentences
   %thead
     %tr
-      %th 句子
-      %th 创建日期
+      %th 句子及相关单词
+      %th 
   %tbody
     - @sentences.each do |sentence|
       %tr#original_tr
-        %td#tr_sentence_title= sentence.title
-        %td= ""
+        %td#tr_sentence_title= link_to sentence.title, edit_sentence_path(sentence)
+        %td= link_to "相关单词", edit_sentence_path(sentence)  
       %tr#translated_tr
-        %td#tr_sentence_in_chinese= sentence.in_chinese
+        %td.in_chinese#tr_sentence_in_chinese= sentence.in_chinese
         %td= sentence.created_at.to_date
+      %tr#related_words_tr
+        %td#tr_related_words
+          - for word in sentence.words
+            = link_to word.title, edit_word_path(word)
+            = ':'
+            %span.in_chinese= word.in_chinese
+            = '；'
+        %td= ""
 
-%h2=link_to"最近编辑过的单词", words_path
-
-%table#words
-  %thead
-    %tr
-      %th 单词
-      %th 中文释义
-      %th 记:忘
-      %th 创建日期
-      %th 编辑
-  %tbody
-    - @words.each do |word|
-      %tr
-        %td= word.title
-        %td= word.in_chinese
-        %td= (word.attempt_count.to_i - word.failed_count.to_i).to_s + ':' + word.failed_count.to_i.to_s
-        %td= word.created_at.to_date
-        %td= link_to "修改", edit_word_path(word)
+%h2=link_to"单词", words_path
+=render :partial => '/words/words_list'

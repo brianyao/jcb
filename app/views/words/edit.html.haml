@@ -1,6 +1,6 @@
 %h2 单词编辑
 = form_tag word_path(@word), :method => :put do
-  = render :partial => "editing_form"
+  = render :partial => "word_editing_form"
   = label :word, :attempt_count, '来自句子'
   - if @sentence
     = link_to @sentence.title, sentence_path(@sentence)

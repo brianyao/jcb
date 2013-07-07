@@ -4,9 +4,9 @@
     %ul.nav#func_nav
       %li.func_nav_item= link_to  @current_user.name, '/'
       %li.func_nav_item= link_to '登出', logout_path
-      %li.func_nav_item= link_to '记单词!', "/ji"
-      %li.func_nav_item= link_to '我的单词', words_path
       %li.func_nav_item= link_to '我的句子', sentences_path
+      %li.func_nav_item= link_to '我的单词', words_path
+      %li.func_nav_item= link_to '记单词!', "/ji"
       %li.func_nav_item= link_to '交作业', '/gen'
   - else
     %ul.nav#login_nav

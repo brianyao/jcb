@@ -1,24 +1,9 @@
 -#  This file is app/views/movies/index.html.haml
 %h2 添加新单词
 = form_tag words_path, :method => :post do
-  = render :partial => 'editing_form'
+  = render :partial => 'word_editing_form'
   %div= submit_tag '添加'
 
 %h2=link_to"最近编辑过的单词", words_path
+=render :partial => 'words_list'
 
-%table#words
-  %thead
-    %tr
-      %th 单词
-      %th 中文释义
-      %th 记:忘
-      %th 创建日期
-      %th 编辑
-  %tbody
-    - @words.each do |word|
-      %tr
-        %td= word.title
-        %td= word.in_chinese
-        %td= (word.attempt_count - word.failed_count).to_s + ':' + word.failed_count.to_s
-        %td= word.created_at.to_date
-        %td= link_to "修改", edit_word_path(word)

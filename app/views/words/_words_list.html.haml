@@ -1,0 +1,14 @@
+%table#words
+  %thead
+    %tr
+      %th 单词
+      %th 中文释义
+      %th 记:忘
+      %th 创建日期
+  %tbody
+    - @words.each do |word|
+      %tr
+        %td= link_to word.title, edit_word_path(word)
+        %td.in_chinese= word.in_chinese
+        %td= (word.attempt_count.to_i - word.failed_count.to_i).to_s + ':' + word.failed_count.to_i.to_s
+        %td= word.created_at.to_date

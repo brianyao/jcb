@@ -11,11 +11,10 @@ a:hover {
 }
 html, body {
   width: auto;
-
   margin: 0;
   padding: 0;
-  background: White;
-  color: Black;
+  background: white;
+  color: #666;
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 11pt;
 }
@@ -77,10 +76,10 @@ li:first-child{
   border-left-width: 1px;
 }
 .login_nav_item a, .func_nav_item a{
-  color: white;
+  color: yellowgreen;
 }
 .login_nav_item a:hover, .func_nav_item a:hover{
-  color: yellowgreen;
+  color: orange;
 }
 div#main {
   margin: 0;
@@ -108,68 +107,65 @@ h1.title a:hover {
   color: #D6DFE8;
 }
 h2 {
+  color: #069;
+  font-size: 120%;
   padding: 20px 0px 0px;
 }
 h3 {
+  font-weight:normal;
+  font-size: 100%;
   padding: 0px 19px;
 }
-table#words {
+.in_chinese{
+  font-style: italic;
+}
+table{
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
   border-bottom: 2px solid yellowgreen;
+}
+table th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: yellowgreen;
 }
 table#words th {
-  border: 2px solid white;
-  font-weight: bold;
-  background-color: yellowgreen;
-}
-table#words th, table#words td {
-  padding: 4px;
-  text-align: left;
-}
-table#sentences {
-  margin: 10px;
-  border-collapse: collapse;
-  width: 100%;
-  border-bottom: 2px solid yellowgreen;
 }
 table#sentences th {
-  border: 2px solid white;
-  font-weight: bold;
-  background-color: yellowgreen;
 }
-table#sentences th, table#sentences td {
+table th, table td {
   padding: 4px;
   text-align: left;
 }
 #no_related_sentence{
-  color: grey;
   font-style: italic;
+  color: grey;  
 }
-#translated_tr{
+#related_words_tr{
   border-bottom: 1px solid yellowgreen;
-
 }
 #tr_sentence_in_chinese{
-  font-style: italic;
   color: grey;
-  text-indent: 7px;
+}
+#tr_sentence_in_chinese, #tr_related_words{
+  text-indent: 10px;
 }
 #notice, #warning, #error {
-  background: dodgerblue;
+  background: yellowgreen;
+  color: white;
   margin: 1em 0;
   padding: 4px;
 }
 form label {
   display: block;
   line-height: 25px;
-  font-weight: bold;
-  color: Black;
+  font-weight: normal;
 }
 textarea { 
-width: 700px; 
-height: 40px; 
+  width: 700px; 
+  height: 40px;
+  font-size: 100%; 
 }
 .text_warning{
   color: dodgerblue;

@@ -1,7 +1,7 @@
 -#  This file is app/views/sentences/index.html.haml
 %h2 添加新句子
 = form_tag sentences_path, :method => :post, :id => "sentences_form" do
-  = render :partial => 'editing_form'
+  = render :partial => 'sentence_editing_form'
   %div= submit_tag '添加'
 
 %h2=link_to"最近编辑过的句子", sentences_path
@@ -9,16 +9,14 @@
 %table#sentences
   %thead
     %tr
-      %th 句子
-      %th 创建日期
-      %th 可用进行的操作
+      %th 句子及翻译
+      %th 
   %tbody
     - @sentences.each do |sentence|
       %tr#original_tr
-        %td#tr_sentence_title= sentence.title
-        %td= ""
-        %td= link_to "编辑相关联的单词", sentence_path(sentence)             
+        %td#tr_sentence_title= link_to sentence.title, edit_sentence_path(sentence)
+        %td= link_to "相关单词", edit_sentence_path(sentence)  
       %tr#translated_tr
-        %td#tr_sentence_in_chinese= sentence.in_chinese
+        %td.in_chinese#tr_sentence_in_chinese= sentence.in_chinese
         %td= sentence.created_at.to_date
-        %td= link_to "编辑句子本身 ", edit_sentence_path(sentence)  
+
