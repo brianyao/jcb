@@ -5,18 +5,5 @@
   %div= submit_tag '添加'
 
 %h2=link_to"最近编辑过的句子", sentences_path
-
-%table#sentences
-  %thead
-    %tr
-      %th 句子及翻译
-      %th 
-  %tbody
-    - @sentences.each do |sentence|
-      %tr#original_tr
-        %td#tr_sentence_title= link_to sentence.title, edit_sentence_path(sentence)
-        %td= link_to "相关单词", edit_sentence_path(sentence)  
-      %tr#translated_tr
-        %td.in_chinese#tr_sentence_in_chinese= sentence.in_chinese
-        %td= sentence.created_at.to_date
+= render :partial => 'sentences_list_without_related_words'
 

@@ -1,0 +1,21 @@
+%table#sentences
+  %thead
+    %tr
+      %th 句子及相关单词
+      %th 
+  %tbody
+    - @sentences.each do |sentence|
+      %tr#original_tr
+        %td#tr_sentence_title= link_to sentence.title, edit_sentence_path(sentence)
+        %td= link_to "相关单词", edit_sentence_path(sentence)  
+      %tr#translated_tr
+        %td.in_chinese#tr_sentence_in_chinese= sentence.in_chinese
+        %td= sentence.created_at.to_date
+      %tr#related_words_tr
+        %td#tr_related_words
+          - for word in sentence.words
+            = link_to word.title, edit_word_path(word)
+            = ':'
+            %span.in_chinese= word.in_chinese
+            = '；'
+        %td= ""
