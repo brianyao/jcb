@@ -1,5 +1,5 @@
 %h2 为此句子添加相关单词
-%h3#sentence= link_to @sentence.title, sentence_path(@sentence)
+%h3#sentence= link_to @sentence.title, edit_sentence_path(@sentence)
 %h3.in_chinese= @sentence.in_chinese
 = form_tag words_path(:sentence_id => @sentence_id), :method => :post do
   = label :word, :title, '单词'

@@ -1,4 +1,5 @@
 %h2 句子编辑
+%h3#sentence= link_to @sentence.title, sentence_path(@sentence)
 = form_tag sentence_path(@sentence), :method => :put, :id => "sentences_form" do
   = render :partial => 'sentence_editing_form'
   = label :sentence, :add_date, '修改最近更新时间'
