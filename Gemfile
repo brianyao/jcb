@@ -8,6 +8,8 @@ gem 'rails', '3.1.0'
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   gem 'sqlite3'
+  gem 'linecache19', :git => 'https://github.com/mark-moseley/linecache'
+  gem 'ruby-debug-base19x', '~> 0.11.30.pre4'  
   gem 'ruby-debug19', :require => 'ruby-debug'
 end
 group :production do
