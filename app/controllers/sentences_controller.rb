@@ -68,8 +68,13 @@ class SentencesController < ApplicationController
   def destroy
     unless self.check_user(Sentence, params[:id]) == 'stop'
       @sentence = Sentence.find(params[:id])
+      @words = Word.where("sentence_id = ?", @sentence)
+      for word in @words
+        word.sentence_id = nil
+        word.save
+      end
       @sentence.destroy
-      flash[:notice] = "成功删除句子“#{@sentence.title}”！"
+      flash[:notice] = "成功删除句子“#{@sentence.title}”并去除相关单词链接！"
       redirect_to sentences_path
     end
   end
