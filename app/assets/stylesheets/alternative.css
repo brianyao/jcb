@@ -81,6 +81,9 @@ li:first-child{
 .login_nav_item a:hover, .func_nav_item a:hover{
   color: orange;
 }
+#qq_logo_1{
+  margin-top: 0px;
+}
 div#main {
   margin: 0;
   padding: 0 20px 20px;
