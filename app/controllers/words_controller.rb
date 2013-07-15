@@ -12,8 +12,13 @@ class WordsController < ApplicationController
   public
 
   def ji
-    @words = Word.where("user_id = ?", @current_user).order(
-      "(CASE WHEN attempt_count <> 0 THEN (failed_count / attempt_count) ELSE 0 END) DESC,
+    @words = Word.where("user_id = ?", @current_user).order("(
+      CASE
+        When (attempt_count = failed_count) THEN failed_count
+        WHEN (attempt_count <> 0) THEN (failed_count / attempt_count)
+        ELSE 0
+      END
+      ) DESC,
       updated_at").limit(20)
     if request.put? 
       @word = Word.find params[:id]

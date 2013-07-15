@@ -125,6 +125,12 @@ table{
   width: 100%;
   border-bottom: 2px solid yellowgreen;
 }
+/*#ji_table tr:nth-child(2n) {
+  background-color: #deb;
+}*/
+table tr:hover {
+  background-color: #c2e184;
+}
 table th {
   border: 2px solid white;
   font-weight: bold;
