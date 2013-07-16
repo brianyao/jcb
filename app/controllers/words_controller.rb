@@ -15,7 +15,8 @@ class WordsController < ApplicationController
     @words = Word.where("user_id = ?", @current_user).order("(
       CASE
         When (attempt_count = failed_count) THEN failed_count
-        WHEN (attempt_count <> 0) THEN (failed_count / attempt_count)
+        WHEN (attempt_count <> 0 AND failed_count = 0) THEN ((-1)*attempt_count)
+        WHEN (attempt_count <> 0 AND failed_count <> 0) THEN (failed_count / attempt_count)
         ELSE 0
       END
       ) DESC,
