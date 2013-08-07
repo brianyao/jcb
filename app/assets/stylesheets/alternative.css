@@ -15,7 +15,6 @@ html, body {
   padding: 0;
   background: white;
   color: #666;
-  font-family: Tahoma, Verdana, sans-serif;
   font-size: 12pt;
 }
 #main {
@@ -217,14 +216,14 @@ textarea {
 /* All form factors */
 /* Main body and headings */
 body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, "Microsoft Yahei";
 }
 .heading, .subheading {
-  font-family: 'Ubuntu', Helvativa, Arial, sans-serif;
+  font-family: 'Ubuntu', Helvativa, Arial, sans-serif, "Microsoft Yahei";
   text-align: center;
 }
 .heading h1 {
-  font-family: 'Lobster Two', cursive;
+  font-family: 'Lobster Two', cursive, "Microsoft Yahei";
 }
 p.lead {
   padding-top: 1.5%;
