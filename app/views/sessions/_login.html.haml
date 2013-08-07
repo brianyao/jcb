@@ -1,21 +1,53 @@
-%div#header
-  #header_logo=link_to image_tag('header_logo.png'), '/' 
-  - if @current_user
-    %ul.nav#func_nav
-      %li.func_nav_item
-        - if @current_user[:provider] == 'qq_connect'
-          = link_to  image_tag('qq_logo_1.png'), '/'
-        = link_to  @current_user.name, '/'
-      %li.func_nav_item= link_to '登出', logout_path
-      %li.func_nav_item= link_to '我的句子', sentences_path
-      %li.func_nav_item= link_to '我的单词', words_path
-      %li.func_nav_item= link_to '记单词!', "/ji"
-      %li.func_nav_item= link_to '交作业', '/gen'
-  - else
-    %ul.nav#login_nav
-      %li.login_nav_item
-        =link_to image_tag('qq_logo_1.png'), "/auth/qq_connect", :id =>:qq_logo_1
-        =link_to "使用腾讯QQ登陆", "/auth/qq_connect"
-      %li.login_nav_item= link_to '使用新浪微博登陆', "/auth/weibo"
-      %li.login_nav_item= link_to 'Login w/ Facebook', "/auth/facebook"
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+        %spand.icon-bar
+          %spand.icon-bar
+            %spand.icon-bar
+      .brand=link_to image_tag('header_logo.png'), '/'
+      .nav-collapse.collapse
+        %ul.nav
+          - if @current_user
+            %li              
+              %a{:href => "/"}
+                - if @current_user[:provider] == 'qq_connect'
+                  =image_tag('qq_logo_1.png', :alt => "qq connect logo")
+                =@current_user.name
+            %li= link_to '登出', logout_path
+            %li= link_to '我的句子', sentences_path
+            %li= link_to '我的单词', words_path
+            %li= link_to '记单词!', "/ji"
+            %li= link_to '交作业', '/gen'
+          - else
+            %li
+              %a{:href => "/auth/qq_connect"}
+                =image_tag('qq_logo_1.png', :alt => "qq connect logo")
+                使用腾讯QQ登陆
+            %li= link_to '使用新浪微博登陆', "/auth/weibo"
+            %li= link_to 'Login w/ Facebook', "/auth/facebook"
+
+
+
+
+/ %div#header
+/   #header_logo=link_to image_tag('header_logo.png'), '/' 
+/   - if @current_user
+/     %ul.nav#func_nav
+/       %li.func_nav_item
+/         - if @current_user[:provider] == 'qq_connect'
+/           = link_to  image_tag('qq_logo_1.png'), '/'
+/         = link_to  @current_user.name, '/'
+/       %li.func_nav_item= link_to '登出', logout_path
+/       %li.func_nav_item= link_to '我的句子', sentences_path
+/       %li.func_nav_item= link_to '我的单词', words_path
+/       %li.func_nav_item= link_to '记单词!', "/ji"
+/       %li.func_nav_item= link_to '交作业', '/gen'
+/   - else
+/     %ul.nav#login_nav
+/       %li.login_nav_item
+/         =link_to image_tag('qq_logo_1.png'), "/auth/qq_connect", :id =>:qq_logo_1
+/         =link_to "使用腾讯QQ登陆", "/auth/qq_connect"
+/       %li.login_nav_item= link_to '使用新浪微博登陆', "/auth/weibo"
+/       %li.login_nav_item= link_to 'Login w/ Facebook', "/auth/facebook"
     

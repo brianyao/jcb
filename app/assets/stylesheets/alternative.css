@@ -16,7 +16,7 @@ html, body {
   background: white;
   color: #666;
   font-family: Tahoma, Verdana, sans-serif;
-  font-size: 11pt;
+  font-size: 12pt;
 }
 #main {
   padding: 0px 30px;
@@ -40,7 +40,13 @@ html, body {
   margin: 5px 5px;
   height: 17px;
 }
-ul.nav{
+.nav li a{
+  color: yellowgreen !important;;
+}
+.nav li a:hover{
+  color: orange !important;;
+}
+/*ul.nav{
   margin: 0px 0px 0px 170px;
   background: transparent;
   list-style: none inside none;
@@ -83,14 +89,14 @@ li:first-child{
 }
 #qq_logo_1{
   margin-top: 0px;
-}
+}*/
 div#main {
   margin: 0;
   padding: 0 20px 20px;
 }
 h1 {
   color: maroon;
-  font-size: 150%;
+  font-size: 200%;
   font-style: italic;
   display: block;
   width: 100%;
@@ -111,12 +117,12 @@ h1.title a:hover {
 }
 h2 {
   color: #069;
-  font-size: 120%;
+  font-size: 175%;
   padding: 20px 0px 0px;
 }
 h3 {
   font-weight:normal;
-  font-size: 100%;
+  font-size: 150%;
   padding: 0px 19px;
 }
 .in_chinese{
@@ -172,9 +178,7 @@ form label {
   font-weight: normal;
 }
 textarea { 
-  width: 700px; 
   height: 40px;
-  font-size: 100%; 
 }
 .text_warning{
   color: dodgerblue;
@@ -183,4 +187,104 @@ textarea {
 }
 .text_warning:hover{
   color: maroon;
+}
+
+/* ================  switch to twitter bootstrap  ================= */
+/* Large desktop */
+@media (min-width: 980px){
+  body {
+    padding-top: 60px; 
+  }
+  .linediv-l {
+    border-right: 1px white solid;
+  }
+  .linediv-r {
+    border-left: 1px white solid;
+  }
+}
+/* Landscape phones and down*/
+@mdeia (max-width: 480px) {
+  .copy {
+    padding:2.5% 10%;
+  }
+  .linediv-l {
+    border-bottom: 1px white solid;
+  }
+  .linediv-r {
+    border-top: 1px white solid;
+  }
+}
+/* All form factors */
+/* Main body and headings */
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.heading, .subheading {
+  font-family: 'Ubuntu', Helvativa, Arial, sans-serif;
+  text-align: center;
+}
+.heading h1 {
+  font-family: 'Lobster Two', cursive;
+}
+p.lead {
+  padding-top: 1.5%;
+  font-size: 24px;
+  line-height: 30px;
+}
+p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Video pitch and Action*/
+.pitch {
+  padding: 1% 0%;
+}
+.order {
+  padding: 1% 0%;
+}
+.actions {
+  background-color: #343434;
+  padding: 1% 0%;
+}
+.video, .thermometer, .order, .social, .statistics {
+  text-align: center;
+}
+.statistics h3, .statistics p {
+  padding: 1% 0%;
+  color: white;
+}
+h2 {
+  text-align: center;
+  padding: 5% 0% 1%;
+}
+h3, h4 {
+  text-align: center;
+}
+.statistics h3 {
+  margin: 0px;
+}
+
+/* Marketing Copy and Footer*/
+.copy {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  text-align: justify;
+}
+.asset {
+  padding: 2.5% 0%;
+}
+.footer {
+  color: #cccccc;
+  text-align: center;
+}
+.footer p {
+  font-size: 11px;
+}
+.footer a {
+  coler: #ccccff;
+}
+div.addthis_toolbox {
+  width:220px;
+  margin: 0 auto;
 }
