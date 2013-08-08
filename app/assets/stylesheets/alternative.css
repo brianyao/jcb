@@ -281,9 +281,13 @@ h3, h4 {
   font-size: 11px;
 }
 .footer a {
-  coler: #ccccff;
+  color: #ccccff;
 }
 div.addthis_toolbox {
   width:220px;
   margin: 0 auto;
+}
+/* style change on the remember asking page */
+.rememberbutton {
+  text-align: center;
 }
